@@ -74,16 +74,11 @@ export default function ServicesPage() {
               {services.map((service) => (
                 <AccordionItem value={service.value} key={service.value} className="border-none">
                   <Card className="overflow-hidden shadow-lg transition-all duration-300">
-                    <AccordionTrigger className="p-0 hover:no-underline [&[data-state=open]>div>h3]:text-primary group">
+                    <AccordionTrigger className="p-6 hover:no-underline [&[data-state=open]>div>h3]:text-primary group text-left">
                        <div className="flex flex-col md:flex-row items-center text-left w-full">
-                         <div className="p-6 flex-shrink-0">{service.icon}</div>
-                         <div className="p-6 pt-0 md:pt-6">
+                         <div className="pr-6 flex-shrink-0">{service.icon}</div>
+                         <div className="w-full">
                            <h3 className="font-headline text-2xl font-bold transition-colors">{service.title}</h3>
-                         </div>
-                         <div className="p-6 ml-auto">
-                            <div className="p-2 rounded-full bg-gray-100 group-data-[state=open]:rotate-180 transition-transform">
-                                <ChevronDown className="w-6 h-6 text-gray-500" />
-                            </div>
                          </div>
                        </div>
                     </AccordionTrigger>
