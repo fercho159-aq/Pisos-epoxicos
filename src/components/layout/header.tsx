@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Layers, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import React from "react";
 
@@ -71,20 +71,22 @@ export function Header() {
                   <span className="sr-only">Abrir menú</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] bg-card text-foreground">
-                <div className="flex flex-col h-full">
-                    <div className="flex justify-between items-center p-4 border-b">
-                         <Link href="/" className="flex items-center gap-2">
+              <SheetContent side="right" className="w-[300px] bg-card text-foreground flex flex-col">
+                <SheetHeader className="p-4 border-b flex-row justify-between items-center">
+                    <SheetTitle asChild>
+                        <Link href="/" className="flex items-center gap-2">
                             <Layers className="h-6 w-6 text-primary" />
                             <span className="font-headline text-xl font-bold">StoneLook</span>
                         </Link>
-                        <SheetClose asChild>
-                             <Button variant="ghost" size="icon">
-                                <X className="h-6 w-6" />
-                                <span className="sr-only">Cerrar menú</span>
-                            </Button>
-                        </SheetClose>
-                    </div>
+                    </SheetTitle>
+                    <SheetClose asChild>
+                        <Button variant="ghost" size="icon">
+                            <X className="h-6 w-6" />
+                            <span className="sr-only">Cerrar menú</span>
+                        </Button>
+                    </SheetClose>
+                </SheetHeader>
+                <div className="flex flex-col h-full">
                   <nav className="flex flex-col gap-4 p-4 mt-4">
                     {navItems.map((item) => (
                       <SheetClose asChild key={item.href}>
