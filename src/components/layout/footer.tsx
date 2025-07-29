@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2 mb-2">
-                <Image src="/images/logo.png" alt="LEXFOR Logo" width={180} height={50} className="object-contain" />
+                <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={100} height={50} className="object-contain" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
                 Proporcionando soluciones de pisos de alto rendimiento para los entornos más exigentes de México.
@@ -31,7 +31,6 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contacto</Link></li>
                 <li><Link href="/quote" className="text-muted-foreground hover:text-primary">Solicitar Presupuesto</Link></li>
-                <li><Link href="#" className="text-muted-foreground hover:text-primary">FAQs</Link></li>
               </ul>
             </div>
              <div>
