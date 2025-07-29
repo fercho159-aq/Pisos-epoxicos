@@ -74,7 +74,7 @@ export default function Home() {
       <section id="about" className="py-16 md:py-24 bg-card">
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="order-2 md:order-1">
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">
                 Líderes en Soluciones de Pisos por Más de 100 Años
               </h2>
@@ -88,7 +88,7 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg">
+            <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="https://placehold.co/600x450"
                   alt="Equipo de Stonhard trabajando"
@@ -103,13 +103,11 @@ export default function Home() {
       </section>
 
       <section id="products" className="py-16 md:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="container px-4 md:px-6 text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Nuestro Catálogo de Productos</h2>
             <p className="text-muted-foreground text-lg mb-12">
               Explora nuestra gama de sistemas de pisos, diseñados para cumplir con los más altos estándares de rendimiento y estética.
             </p>
-          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
               <Card key={product.name} className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
