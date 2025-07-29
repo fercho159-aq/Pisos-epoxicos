@@ -176,7 +176,7 @@ export function Header() {
                 <SheetHeader className="p-4 border-b flex-row justify-between items-center">
                     <SheetTitle asChild>
                         <Link href="/">
-                            <Image src="/images/logo.png" alt="LEXFOR Logo" width={120} height={32} className="object-contain" />
+                            <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={120} height={32} className="object-contain" />
                         </Link>
                     </SheetTitle>
                     <SheetClose asChild>
