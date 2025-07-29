@@ -1,0 +1,59 @@
+import Link from "next/link";
+import { Layers, Facebook, Linkedin, Twitter } from "lucide-react";
+
+export function Footer() {
+  return (
+    <footer className="bg-card border-t">
+      <div className="container mx-auto px-4 md:px-6 py-8">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex flex-col gap-2">
+            <Link href="/" className="flex items-center gap-2 mb-2">
+                <Layers className="h-7 w-7 text-primary" />
+                <span className="font-headline text-2xl font-bold">StoneLook</span>
+            </Link>
+            <p className="text-sm text-muted-foreground max-w-sm">
+                Proporcionando soluciones de pisos de alto rendimiento para los entornos más exigentes de México.
+            </p>
+          </div>
+          <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-8">
+            <div>
+              <h4 className="font-bold mb-4">Navegación</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/products" className="text-muted-foreground hover:text-primary">Productos</Link></li>
+                <li><Link href="/services" className="text-muted-foreground hover:text-primary">Servicios</Link></li>
+                <li><Link href="/case-studies" className="text-muted-foreground hover:text-primary">Casos de Éxito</Link></li>
+                <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Noticias</Link></li>
+              </ul>
+            </div>
+             <div>
+              <h4 className="font-bold mb-4">Soporte</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contacto</Link></li>
+                <li><Link href="/quote" className="text-muted-foreground hover:text-primary">Solicitar Presupuesto</Link></li>
+                <li><Link href="#" className="text-muted-foreground hover:text-primary">FAQs</Link></li>
+              </ul>
+            </div>
+             <div>
+              <h4 className="font-bold mb-4">Legal</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="#" className="text-muted-foreground hover:text-primary">Términos de Servicio</Link></li>
+                <li><Link href="#" className="text-muted-foreground hover:text-primary">Política de Privacidad</Link></li>
+              </ul>
+            </div>
+             <div>
+              <h4 className="font-bold mb-4">Síganos</h4>
+              <div className="flex gap-4">
+                  <Link href="#" aria-label="Facebook"><Facebook className="w-6 h-6 text-muted-foreground hover:text-primary"/></Link>
+                  <Link href="#" aria-label="LinkedIn"><Linkedin className="w-6 h-6 text-muted-foreground hover:text-primary"/></Link>
+                  <Link href="#" aria-label="Twitter"><Twitter className="w-6 h-6 text-muted-foreground hover:text-primary"/></Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} StoneLook - Stonhard México. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
