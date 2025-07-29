@@ -3,13 +3,13 @@ import { Layers, Facebook, Linkedin, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-card border-t">
+    <footer className="bg-card border-t w-full">
       <div className="container mx-auto px-4 md:px-6 py-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2 mb-2">
                 <Layers className="h-7 w-7 text-primary" />
-                <span className="font-headline text-2xl font-bold">LEXFOR</span>
+                <span className="font-headline text-2xl font-bold">LEXFOR S.A DE C.V.</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
                 Proporcionando soluciones de pisos de alto rendimiento para los entornos más exigentes de México.
@@ -37,7 +37,7 @@ export function Footer() {
               <h4 className="font-bold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/terms" className="text-muted-foreground hover:text-primary">Términos de Servicio</Link></li>
-                <li><Link href="#" className="text-muted-foreground hover:text-primary">Política de Privacidad</Link></li>
+                <li><Link href="/privacy" className="text-muted-foreground hover:text-primary">Política de Privacidad</Link></li>
               </ul>
             </div>
              <div>
