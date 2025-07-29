@@ -13,6 +13,7 @@ import Link from "next/link";
 const services = [
   {
     value: "hvac",
+    id: "hvac",
     title: "Sistemas HVAC",
     icon: <Wind className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
@@ -27,6 +28,7 @@ const services = [
   },
   {
     value: "obra-civil",
+    id: "obra-civil",
     title: "Obra Civil",
     icon: <HardHat className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
@@ -41,6 +43,7 @@ const services = [
   },
   {
     value: "estructuras",
+    id: "estructuras",
     title: "Estructuras Metálicas y Techumbres",
     icon: <Building className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
@@ -55,6 +58,7 @@ const services = [
   },
   {
     value: "tablaroca",
+    id: "tablaroca",
     title: "Tablaroca",
     icon: <Layers className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
@@ -69,6 +73,7 @@ const services = [
   },
   {
     value: "dpa",
+    id: "dpa",
     title: "DPA (Pulido y Abrillantado)",
     icon: <Sparkles className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
@@ -100,7 +105,7 @@ export default function ServicesPage() {
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible defaultValue="hvac" className="w-full space-y-8">
               {services.map((service) => (
-                <AccordionItem value={service.value} key={service.value} className="border-none">
+                <AccordionItem value={service.value} key={service.value} id={service.id} className="border-none scroll-mt-20">
                   <Card className="overflow-hidden shadow-lg transition-all duration-300">
                     <AccordionTrigger className="p-6 hover:no-underline [&[data-state=open]>div>h3]:text-primary group text-left">
                        <div className="flex flex-col md:flex-row items-center text-left w-full">

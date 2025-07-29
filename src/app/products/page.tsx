@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 
 const productCategories = [
   {
+    id: "sistemas-ucrete",
     category: "Sistemas Ucrete",
     icon: <Layers className="w-8 h-8 text-primary" />,
     products: [
@@ -43,6 +44,7 @@ const productCategories = [
     ],
   },
   {
+    id: "sistemas-epoxicos",
     category: "Sistemas Epóxicos",
     icon: <Shield className="w-8 h-8 text-primary" />,
     products: [
@@ -85,6 +87,7 @@ const productCategories = [
     ],
   },
   {
+    id: "sellos-juntas",
     category: "Sellos, Juntas y Soluciones Sanitarias",
     icon: <CheckCircle className="w-8 h-8 text-primary" />,
     products: [
@@ -96,6 +99,7 @@ const productCategories = [
     ]
   },
   {
+    id: "senalizacion-muros",
     category: "Señalización y Muros",
     icon: <Signal className="w-8 h-8 text-primary" />,
     products: [
@@ -107,6 +111,7 @@ const productCategories = [
     ]
   },
   {
+    id: "canceleria-acabados",
     category: "Cancelería y Acabados Generales",
     icon: <Paintbrush className="w-8 h-8 text-primary" />,
     products: [
@@ -138,7 +143,7 @@ export default function ProductsPage() {
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6 space-y-16">
           {productCategories.map((category) => (
-            <div key={category.category}>
+            <div key={category.category} id={category.id} className="scroll-mt-20">
               <div className="flex items-center gap-4 mb-8">
                 {category.icon}
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">{category.category}</h2>
