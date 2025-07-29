@@ -34,8 +34,8 @@ export function Header() {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      isTransparent ? "bg-transparent text-white" : "bg-card/80 backdrop-blur-sm shadow-md text-foreground"
+      "sticky top-0 z-50 w-full transition-all duration-300 text-foreground",
+      isTransparent ? "bg-transparent" : "bg-card/80 backdrop-blur-sm shadow-md"
     )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
@@ -51,7 +51,7 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
-                  pathname === item.href ? "text-primary font-bold" : ""
+                  pathname === item.href ? "text-primary font-bold" : (isTransparent ? "text-white" : "text-foreground")
                 )}
               >
                 {item.label}
