@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -24,6 +25,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { submitQuoteRequest } from "@/ai/flows/quote-flow";
 
 
 const formSchema = z.object({
@@ -37,6 +39,7 @@ const formSchema = z.object({
 
 export function QuoteForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -50,13 +53,33 @@ export function QuoteForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Solicitud Enviada",
-      description: "Gracias por su interés. Un representante se pondrá en contacto con usted en breve.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const result = await submitQuoteRequest(values);
+      if (result.success) {
+        toast({
+          title: "Solicitud Enviada",
+          description: "Gracias por su interés. Un representante se pondrá en contacto con usted en breve.",
+        });
+        form.reset();
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Error al enviar",
+          description: "Hubo un problema al enviar su solicitud. Por favor, inténtelo de nuevo.",
+        });
+      }
+    } catch (error) {
+       toast({
+        variant: "destructive",
+        title: "Error inesperado",
+        description: "Ocurrió un error inesperado. Por favor, inténtelo más tarde.",
+      });
+      console.error(error);
+    } finally {
+        setIsSubmitting(false);
+    }
   }
 
   return (
@@ -76,7 +99,7 @@ export function QuoteForm() {
                     <FormItem>
                     <FormLabel>Nombre Completo</FormLabel>
                     <FormControl>
-                        <Input placeholder="Ej. Juan Pérez" {...field} />
+                        <Input placeholder="Ej. Juan Pérez" {...field} disabled={isSubmitting} />
                     </FormControl>
                     <FormMessage />
                     </FormItem>
@@ -89,7 +112,7 @@ export function QuoteForm() {
                     <FormItem>
                     <FormLabel>Empresa</FormLabel>
                     <FormControl>
-                        <Input placeholder="Ej. Acme Inc." {...field} />
+                        <Input placeholder="Ej. Acme Inc." {...field} disabled={isSubmitting} />
                     </FormControl>
                     <FormMessage />
                     </FormItem>
@@ -104,7 +127,7 @@ export function QuoteForm() {
                     <FormItem>
                     <FormLabel>Correo Electrónico</FormLabel>
                     <FormControl>
-                        <Input placeholder="su@email.com" {...field} />
+                        <Input placeholder="su@email.com" {...field} disabled={isSubmitting} />
                     </FormControl>
                     <FormMessage />
                     </FormItem>
@@ -117,7 +140,7 @@ export function QuoteForm() {
                     <FormItem>
                     <FormLabel>Teléfono</FormLabel>
                     <FormControl>
-                        <Input placeholder="Ej. 55 1234 5678" {...field} />
+                        <Input placeholder="Ej. 55 1234 5678" {...field} disabled={isSubmitting} />
                     </FormControl>
                     <FormMessage />
                     </FormItem>
@@ -130,7 +153,7 @@ export function QuoteForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Industria</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
                     <FormControl>
                       <SelectTrigger>
                         <SelectValue placeholder="Seleccione su industria" />
@@ -160,13 +183,16 @@ export function QuoteForm() {
                       placeholder="Describa brevemente su proyecto, incluyendo el área aproximada (m²), las condiciones actuales del piso y los requisitos específicos."
                       className="min-h-[120px]"
                       {...field}
+                      disabled={isSubmitting}
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" size="lg">Enviar Solicitud</Button>
+            <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                {isSubmitting ? 'Enviando...' : 'Enviar Solicitud'}
+            </Button>
           </form>
         </Form>
       </CardContent>
