@@ -1,213 +1,177 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Zap, Shield, Sun } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { CheckCircle, Layers, Paintbrush, Shield, Signal } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const products = [
+const productCategories = [
   {
-    name: "Stonclad",
-    category: "Morteros Epóxicos",
-    tagline: "Resistencia incomparable para la industria pesada.",
-    image: "https://placehold.co/800x600",
-    hint: "epoxy floor",
-    description: "Los sistemas Stonclad están diseñados para proporcionar una extraordinaria protección en entornos industriales severos. Soportan impactos, abrasión y ataque químico, lo que los hace ideales para plantas de manufactura, procesamiento de alimentos y áreas de tráfico pesado.",
-    specs: [
-      { key: "Espesor", value: "6 mm (1/4 de pulgada)" },
-      { key: "Resistencia a la compresión", value: "10,000 psi (ASTM C579)" },
-      { key: "Absorción de agua", value: "<0.2% (ASTM C413)" },
-      { key: "Acabado", value: "Liso o texturizado antideslizante" },
+    category: "Sistemas Ucrete",
+    icon: <Layers className="w-8 h-8 text-primary" />,
+    products: [
+      {
+        name: "Sistema Ucrete MF",
+        description: "Recubrimiento autonivelante para pisos de alto desempeño con propiedades antiderrapantes en entornos secos. Ideal para industria manufacturera, áreas de procesados y almacenes. Excelente resistencia química, al impacto y temperaturas (-15°C a +70°C).",
+        image: "https://placehold.co/600x400",
+        hint: "factory floor",
+      },
+      {
+        name: "Sistema Ucrete RG",
+        description: "Diseñado para recubrir zoclos, trincheras, muretes de contención secundaria y bases de tanques. Resistencia química, al impacto y choques térmicos (-25°C a +130°C).",
+        image: "https://placehold.co/600x400",
+        hint: "industrial trench",
+      },
+      {
+        name: "Sistema Ucrete UD 200",
+        description: "Acabado antiderrapante con resistencia extrema a impactos, químicos y choques térmicos (-25°C a +130°C). Soporta derrames ocasionales hasta +150°C.",
+        image: "https://placehold.co/600x400",
+        hint: "heavy duty floor",
+      },
+      {
+        name: "Sistema Ucrete DP",
+        description: "Superficie antiderrapante de textura fina. Alta resistencia al impacto, agentes agresivos y choques térmicos (-40°C a +120°C). Fácil limpieza.",
+        image: "https://placehold.co/600x400",
+        hint: "textured industrial floor",
+      },
     ],
-    features: ["Máxima resistencia al impacto", "Resistente a un amplio rango de químicos", "Ideal para reparación de concreto dañado", "Disponible en varias texturas"]
   },
   {
-    name: "Stonshield",
-    category: "Sistemas Antideslizantes",
-    tagline: "Seguridad y estética en un solo piso.",
-    image: "https://placehold.co/800x600",
-    hint: "textured floor",
-    description: "La familia de productos Stonshield ofrece superficies texturizadas y resistentes al deslizamiento, perfectas para áreas que requieren seguridad y facilidad de limpieza. Sus mezclas de cuarzo de colores le otorgan un aspecto decorativo, ideal para laboratorios, hospitales y escuelas.",
-    specs: [
-      { key: "Espesor", value: "1.5 a 6 mm" },
-      { key: "Resistencia a la compresión", value: "8,500 psi" },
-      { key: "Textura", value: "Ligera, media o agresiva" },
-      { key: "Acabado", value: "Satinado o mate" },
+    category: "Sistemas Epóxicos",
+    icon: <Shield className="w-8 h-8 text-primary" />,
+    products: [
+      {
+        name: "Sistema Epóxico Autonivelante",
+        description: "Acabado liso para áreas limpias y producción. Opción con agregados para tránsito pesado/impactos, o sin agregados para tránsito ligero. Resistencia química y fácil limpieza.",
+        image: "https://placehold.co/600x400",
+        hint: "clean room floor",
+      },
+      {
+        name: "Sistema Epóxico Cascara de Naranja",
+        description: "Acabado semiderrapante con textura tipo cáscara de naranja. Ideal para almacenes, talleres y pasillos. Opciones con/sin agregados para tránsito pesado/ligero.",
+        image: "https://placehold.co/600x400",
+        hint: "textured epoxy",
+      },
+      {
+        name: "Sistema Epóxico Antiderrapante",
+        description: "Acabado antiderrapante para áreas con contacto constante con agua/líquidos. Reduce deslizamientos peatonales/mecánicos. Refuerzo contra ataques químicos.",
+        image: "https://placehold.co/600x400",
+        hint: "non-slip floor",
+      },
+      {
+        name: "Sistema Epóxico Conductivo",
+        description: "Descarga electricidad estática a tierra, evitando chispas. Ideal para quirófanos, laboratorios, ensamble de productos eléctricos/inflamables.",
+        image: "https://placehold.co/600x400",
+        hint: "operating room",
+      },
+      {
+        name: "Sistema Epóxico de Cuarzo",
+        description: "Decorativo con combinación de 2 colores. Acabado autonivelante (cuarzo encapsulado) y antiderrapante.",
+        image: "https://placehold.co/600x400",
+        hint: "quartz floor",
+      },
+      {
+        name: "Sistema Epóxico de Chip de Hojuela",
+        description: "Decorativo con chips de colores. Acabado autonivelante (hojuela encapsulada) y texturizado.",
+        image: "https://placehold.co/600x400",
+        hint: "decorative flake floor",
+      },
     ],
-    features: ["Excelente resistencia al deslizamiento", "Fácil de limpiar y mantener", "Amplia gama de mezclas de colores", "Bajo olor durante la instalación"]
   },
   {
-    name: "Stonres",
-    category: "Pisos Resilientes",
-    tagline: "Rendimiento ergonómico, diseño sin límites.",
-    image: "https://placehold.co/800x600",
-    hint: "colorful floor",
-    description: "Stonres es un sistema de piso de uretano, resiliente y reductor de ruido, que proporciona comodidad bajo los pies sin sacrificar la resistencia. Sus capacidades de diseño personalizado lo hacen perfecto para espacios públicos, áreas de salud y educación.",
-    specs: [
-      { key: "Espesor", value: "2 a 4 mm" },
-      { key: "Reducción de ruido", value: "Hasta 10 dB" },
-      { key: "Elongación", value: "100% (ASTM D2370)" },
-      { key: "Acabado", value: "Mate" },
-    ],
-    features: ["Comodidad ergonómica", "Reduce el ruido de impacto", "Resistente a manchas y desgaste", "Patrones y colores personalizables"]
+    category: "Sellos, Juntas y Soluciones Sanitarias",
+    icon: <CheckCircle className="w-8 h-8 text-primary" />,
+    products: [
+        { name: "Sellos Epóxicos", description: "Para mantenimiento de pisos existentes o renovación estética. Bajos espesores." },
+        { name: "Sellos de Poliuretano", description: "Capa superficial de sacrificio/protección para sistemas epóxicos. Mayor resistencia química, mecánica y a rayos UV." },
+        { name: "Tratamiento de Juntas Construcción y Control", description: "Regenera juntas mediante corte y relleno con material semi-rígido/flexible. Contrarresta movimientos estructurales." },
+        { name: "Curva Sanitaria", description: "Recubrimiento en uniones muro-muro/muro-platón (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad." },
+        { name: "Zoclo Sanitario", description: "Recubrimiento en uniones muro-piso (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad." },
+    ]
   },
   {
-    name: "Stonchem",
-    category: "Recubrimientos Químicos",
-    tagline: "Protección definitiva contra la corrosión.",
-    image: "https://placehold.co/800x600",
-    hint: "chemical plant",
-    description: "Los sistemas Stonchem ofrecen una protección inigualable contra ataques químicos agresivos, desde ácidos hasta solventes. Son la solución ideal para áreas de contención secundaria, plantas químicas y áreas de procesamiento que manejan sustancias corrosivas.",
-    specs: [
-      { key: "Espesor", value: "2 a 6 mm" },
-      { key: "Base química", value: "Epóxico novolac, vinil éster" },
-      { key: "Rango de temperatura", value: "Hasta 121°C (250°F)" },
-      { key: "Acabado", value: "Liso" },
-    ],
-    features: ["Resistencia química superior", "Protección para concreto y acero", "Soporta altas temperaturas", "Sistema sin juntas"]
+    category: "Señalización y Muros",
+    icon: <Signal className="w-8 h-8 text-primary" />,
+    products: [
+        { name: "Franja Delimitadora", description: "Amarilla, roja o azul (5cm/10cm ancho) para tránsito peatonal/vehicular." },
+        { name: "Franja de Precaución", description: "Amarilla/negra (5cm/10cm ancho) para alertar riesgos y prevenir accidentes." },
+        { name: "Liso Sanitario con Pintura de Poliuretano", description: "Impermeable, fácil limpieza. Resistencia química/mecánica. Ideal farmacéutica, quirófanos, laboratorios." },
+        { name: "Liso Sanitario con Pintura Antibacterial", description: "Inhibe bacterias, hongos y virus. Ideal farmacéutica, quirófanos, laboratorios." },
+        { name: "Liso Sanitario con Fibra de Vidrio", description: "Reduce agrietamiento por movimientos estructurales. Usa pintura poliuretano/antibacterial." },
+    ]
   },
   {
-    name: "Stonlux",
-    category: "Sistemas Autonivelantes",
-    tagline: "Acabados lisos, ultra limpios y de alto brillo.",
-    image: "https://placehold.co/800x600",
-    hint: "clean room",
-    description: "Stonlux proporciona una superficie sin juntas, lisa y fácil de limpiar, ideal para entornos de salas limpias, laboratorios y áreas de ensamblaje de alta tecnología. Su formulación autonivelante asegura un acabado perfecto y estético.",
-    specs: [
-      { key: "Espesor", value: "1.5 a 3 mm" },
-      { key: "Resistencia al impacto", value: "Excelente" },
-      { key: "Resistencia a la abrasión", value: "Muy Buena (ASTM D-4060)" },
-      { key: "Acabado", value: "Alto brillo o satinado" },
-    ],
-    features: ["Superficie monolítica y lisa", "Excelente resistencia a la limpieza química", "Cumple con los requisitos de VOC", "Disponible en una amplia gama de colores"]
-  },
-  {
-    name: "Stontec",
-    category: "Sistemas Decorativos de Hojuelas",
-    tagline: "Estilo y durabilidad con un aspecto similar al terrazo.",
-    image: "https://placehold.co/800x600",
-    hint: "terrazzo floor",
-    description: "Los sistemas Stontec utilizan una composición de hojuelas de colores para crear un aspecto decorativo y duradero. Son una alternativa popular al terrazo, ideales para pasillos de hospitales, cafeterías, escuelas y espacios comerciales.",
-    specs: [
-      { key: "Espesor", value: "1.5 a 4 mm" },
-      { key: "Composición", value: "Hojuelas de vinilo en una matriz polimérica" },
-      { key: "Resistencia al deslizamiento", value: "Personalizable" },
-      { key: "Acabado", value: "Mate o brillante" },
-    ],
-    features: ["Aspecto decorativo personalizable", "Rápida instalación en comparación con el terrazo", "Resistente a manchas y desgaste", "Ergonómico y confortable"]
+    category: "Cancelería y Acabados Generales",
+    icon: <Paintbrush className="w-8 h-8 text-primary" />,
+    products: [
+        { name: "Puertas Sanitarias", description: "Abatibles, corredizas (simples/dobles). Cierre manual/automático. Empaque perimetral. Cristal 6mm transparente/translúcido/opaco." },
+        { name: "Ventanas Sanitarias", description: "Adaptables a medidas/anchos de muro. Cristal 6mm transparente/translúcido/opaco." },
+        { name: "Canceles Sanitarios", description: "División de áreas en aluminio natural. Paneles de cristal 6mm con sellos de silicon." },
+        { name: "Pass Box", description: "Cierre hermético, cerradura electromagnética, cristal 6mm, luz UV para eliminar bacterias/virus." },
+        { name: "Aluminio Comercial", description: "Puertas, ventanas, canceles. Varias líneas disponibles." },
+        { name: "Loseta", description: "Residencial, comercial e industrial." },
+        { name: "Pintura", description: "Vinílica, esmaltes, poliuretano." },
+    ]
   }
 ];
-
-const specialtyProducts = [
-    {
-        name: "Stonproof",
-        icon: <Shield className="w-8 h-8 text-primary"/>,
-        description: "Sistemas de membranas impermeabilizantes y de contención de grietas para proteger su estructura."
-    },
-    {
-        name: "Stongard",
-        icon: <Sun className="w-8 h-8 text-primary"/>,
-        description: "Recubrimientos para estacionamientos y áreas peatonales, resistentes al tráfico y a la intemperie."
-    },
-    {
-        name: "Stonhard ESD",
-        icon: <Zap className="w-8 h-8 text-primary"/>,
-        description: "Pisos conductivos y disipativos para proteger equipos electrónicos sensibles de la descarga electrostática."
-    }
-]
 
 export default function ProductsPage() {
   return (
     <div className="bg-background w-full">
       <section className="py-12 md:py-20 text-center bg-card border-b">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Catálogo de Productos</h1>
-          <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
-            Descubra la solución de piso perfecta para sus necesidades. Cada uno de nuestros sistemas está diseñado para ofrecer un rendimiento y una durabilidad excepcionales.
+          <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">
+            Catálogo de Productos y Sistemas
+          </h1>
+          <p className="max-w-3xl mx-auto text-lg text-muted-foreground mt-4">
+            Descubra la solución perfecta para sus necesidades. Cada uno de nuestros sistemas está diseñado para ofrecer un rendimiento y una durabilidad excepcionales.
           </p>
         </div>
       </section>
 
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6 space-y-16">
-          {products.map((product, index) => (
-            <Card key={product.name} className="overflow-hidden shadow-lg" id={product.name.toLowerCase()}>
-              <div className="grid md:grid-cols-2">
-                <div className={cn("order-2 md:order-1", index % 2 !== 0 && "md:order-2")}>
-                  <CardHeader className="p-8">
-                    <p className="text-primary font-semibold">{product.category}</p>
-                    <CardTitle className="font-headline text-3xl md:text-4xl">{product.name}</CardTitle>
-                    <p className="text-muted-foreground text-lg pt-2">{product.tagline}</p>
-                  </CardHeader>
-                  <CardContent className="p-8 pt-0">
-                    <p className="mb-6">{product.description}</p>
-                    <Accordion type="single" collapsible className="w-full">
-                      <AccordionItem value="item-1">
-                        <AccordionTrigger className="font-bold">Especificaciones Técnicas</AccordionTrigger>
-                        <AccordionContent>
-                          <ul className="space-y-2 text-sm">
-                            {product.specs.map(spec => (
-                              <li key={spec.key} className="flex justify-between">
-                                <span className="font-semibold text-muted-foreground">{spec.key}</span>
-                                <span>{spec.value}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="item-2">
-                        <AccordionTrigger className="font-bold">Características Principales</AccordionTrigger>
-                        <AccordionContent>
-                          <ul className="space-y-2">
-                            {product.features.map(feature => (
-                              <li key={feature} className="flex items-center gap-2">
-                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                     <Link href="/quote" className="w-full">
-                        <Button size="lg" className="w-full mt-8">Solicitar Información</Button>
-                     </Link>
-                  </CardContent>
-                </div>
-                 <div className={cn("order-1 md:order-2", index % 2 !== 0 && "md:order-1")}>
-                  <Image
-                    src={product.image}
-                    alt={`Piso ${product.name}`}
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover min-h-[300px]"
-                    data-ai-hint={product.hint}
-                  />
-                </div>
+          {productCategories.map((category) => (
+            <div key={category.category}>
+              <div className="flex items-center gap-4 mb-8">
+                {category.icon}
+                <h2 className="font-headline text-3xl md:text-4xl font-bold">{category.category}</h2>
               </div>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-12 md:py-20 bg-card">
-        <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center max-w-3xl mx-auto">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Soluciones Especializadas</h2>
-                <p className="text-muted-foreground text-lg mb-12">
-                Además de nuestros sistemas principales, ofrecemos productos para necesidades específicas.
-                </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {category.products.map((product) => (
+                  <Card key={product.name} className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                    {product.image && (
+                        <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={600}
+                        height={400}
+                        className="w-full h-48 object-cover"
+                        data-ai-hint={product.hint}
+                        />
+                    )}
+                    <CardHeader>
+                      <CardTitle className="font-headline text-xl">{product.name}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground text-sm flex-grow">{product.description}</p>
+                      <Link href="/quote" className="w-full">
+                        <Button className="w-full mt-6">
+                          Solicitar Información
+                        </Button>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-            {specialtyProducts.map((service) => (
-              <div key={service.name} className="p-6">
-                <div className="flex justify-center mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{service.name}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </section>
     </div>

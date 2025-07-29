@@ -35,20 +35,20 @@ const sliderItems = [
 
 const featuredProducts = [
   {
-    name: "Stonclad",
-    description: "Sistemas de mortero epóxico de alta resistencia para entornos industriales exigentes.",
+    name: "Sistema Ucrete",
+    description: "Sistemas de mortero de poliuretano cementicio de alto desempeño para entornos industriales exigentes.",
     image: "https://placehold.co/600x400",
     hint: "industrial floor"
   },
   {
-    name: "Stonshield",
-    description: "Pisos decorativos, resistentes al deslizamiento y fáciles de limpiar.",
+    name: "Sistemas Epóxicos",
+    description: "Pisos versátiles, resistentes al deslizamiento, químicos y fáciles de limpiar para toda industria.",
     image: "https://placehold.co/600x400",
     hint: "textured floor"
   },
   {
-    name: "Stonres",
-    description: "Suelos resilientes que combinan un diseño distintivo con rendimiento ergonómico.",
+    name: "Sistemas Decorativos",
+    description: "Suelos que combinan un diseño distintivo con rendimiento y durabilidad.",
     image: "https://placehold.co/600x400",
     hint: "modern interior"
   },
@@ -216,7 +216,7 @@ respaldan.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+             <div>
                 <h3 className="font-headline text-2xl font-bold mb-6 uppercase">Ventajas de un Piso Epóxico</h3>
                 <ul className="grid grid-cols-1 gap-y-4 text-base">
                     {epoxyAdvantages.map((advantage) => (
