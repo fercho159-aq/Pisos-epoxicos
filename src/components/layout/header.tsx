@@ -1,8 +1,9 @@
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Layers, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import {
@@ -19,6 +20,7 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import React from "react";
+import Image from "next/image";
 
 const productCategories = [
     { name: "Sistemas Ucrete", href: "/products#sistemas-ucrete"},
@@ -133,8 +135,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Layers className="h-7 w-7 text-primary" />
-            <span className="font-headline text-2xl font-bold">LEXFOR</span>
+            <Image src="/images/logo.png" alt="LEXFOR Logo" width={150} height={40} className="object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -174,9 +175,8 @@ export function Header() {
               <SheetContent side="right" className="w-[300px] bg-card text-foreground flex flex-col">
                 <SheetHeader className="p-4 border-b flex-row justify-between items-center">
                     <SheetTitle asChild>
-                        <Link href="/" className="flex items-center gap-2">
-                            <Layers className="h-6 w-6 text-primary" />
-                            <span className="font-headline text-xl font-bold">LEXFOR</span>
+                        <Link href="/">
+                            <Image src="/images/logo.png" alt="LEXFOR Logo" width={120} height={32} className="object-contain" />
                         </Link>
                     </SheetTitle>
                     <SheetClose asChild>

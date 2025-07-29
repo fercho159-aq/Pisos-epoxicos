@@ -1,5 +1,7 @@
+
 import Link from "next/link";
-import { Layers, Facebook, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,8 +10,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2 mb-2">
-                <Layers className="h-7 w-7 text-primary" />
-                <span className="font-headline text-2xl font-bold">LEXFOR S.A DE C.V.</span>
+                <Image src="/images/logo.png" alt="LEXFOR Logo" width={180} height={50} className="object-contain" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
                 Proporcionando soluciones de pisos de alto rendimiento para los entornos más exigentes de México.
