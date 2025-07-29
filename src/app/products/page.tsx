@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Zap, Shield, Sun } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -67,7 +67,55 @@ const products = [
     ],
     features: ["Resistencia química superior", "Protección para concreto y acero", "Soporta altas temperaturas", "Sistema sin juntas"]
   },
+  {
+    name: "Stonlux",
+    category: "Sistemas Autonivelantes",
+    tagline: "Acabados lisos, ultra limpios y de alto brillo.",
+    image: "https://placehold.co/800x600",
+    hint: "clean room",
+    description: "Stonlux proporciona una superficie sin juntas, lisa y fácil de limpiar, ideal para entornos de salas limpias, laboratorios y áreas de ensamblaje de alta tecnología. Su formulación autonivelante asegura un acabado perfecto y estético.",
+    specs: [
+      { key: "Espesor", value: "1.5 a 3 mm" },
+      { key: "Resistencia al impacto", value: "Excelente" },
+      { key: "Resistencia a la abrasión", value: "Muy Buena (ASTM D-4060)" },
+      { key: "Acabado", value: "Alto brillo o satinado" },
+    ],
+    features: ["Superficie monolítica y lisa", "Excelente resistencia a la limpieza química", "Cumple con los requisitos de VOC", "Disponible en una amplia gama de colores"]
+  },
+  {
+    name: "Stontec",
+    category: "Sistemas Decorativos de Hojuelas",
+    tagline: "Estilo y durabilidad con un aspecto similar al terrazo.",
+    image: "https://placehold.co/800x600",
+    hint: "terrazzo floor",
+    description: "Los sistemas Stontec utilizan una composición de hojuelas de colores para crear un aspecto decorativo y duradero. Son una alternativa popular al terrazo, ideales para pasillos de hospitales, cafeterías, escuelas y espacios comerciales.",
+    specs: [
+      { key: "Espesor", value: "1.5 a 4 mm" },
+      { key: "Composición", value: "Hojuelas de vinilo en una matriz polimérica" },
+      { key: "Resistencia al deslizamiento", value: "Personalizable" },
+      { key: "Acabado", value: "Mate o brillante" },
+    ],
+    features: ["Aspecto decorativo personalizable", "Rápida instalación en comparación con el terrazo", "Resistente a manchas y desgaste", "Ergonómico y confortable"]
+  }
 ];
+
+const specialtyProducts = [
+    {
+        name: "Stonproof",
+        icon: <Shield className="w-8 h-8 text-primary"/>,
+        description: "Sistemas de membranas impermeabilizantes y de contención de grietas para proteger su estructura."
+    },
+    {
+        name: "Stongard",
+        icon: <Sun className="w-8 h-8 text-primary"/>,
+        description: "Recubrimientos para estacionamientos y áreas peatonales, resistentes al tráfico y a la intemperie."
+    },
+    {
+        name: "Stonhard ESD",
+        icon: <Zap className="w-8 h-8 text-primary"/>,
+        description: "Pisos conductivos y disipativos para proteger equipos electrónicos sensibles de la descarga electrostática."
+    }
+]
 
 export default function ProductsPage() {
   return (
@@ -140,6 +188,26 @@ export default function ProductsPage() {
               </div>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 bg-card">
+        <div className="container px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Soluciones Especializadas</h2>
+                <p className="text-muted-foreground text-lg mb-12">
+                Además de nuestros sistemas principales, ofrecemos productos para necesidades específicas.
+                </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+            {specialtyProducts.map((service) => (
+              <div key={service.name} className="p-6">
+                <div className="flex justify-center mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{service.name}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

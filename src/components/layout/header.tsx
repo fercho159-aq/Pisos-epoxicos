@@ -13,7 +13,6 @@ const navItems = [
   { href: "/products", label: "Productos" },
   { href: "/services", label: "Servicios" },
   { href: "/case-studies", label: "Casos de Éxito" },
-  { href: "/blog", label: "Noticias" },
   { href: "/contact", label: "Contacto" },
 ];
 
