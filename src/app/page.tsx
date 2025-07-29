@@ -12,7 +12,7 @@ const sliderItems = [
     description: "Descubra las soluciones de pisos de alto rendimiento de LEXFOR, donde la resistencia se une a la estética.",
     buttonText: "Solicitar un Presupuesto",
     buttonLink: "/quote",
-    imageUrl: "/images/slider-inicio-1.jpeg",
+    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg",
     imageHint: "industrial factory"
   },
   {
@@ -37,19 +37,19 @@ const featuredProducts = [
   {
     name: "Sistema Ucrete",
     description: "Sistemas de mortero de poliuretano cementicio de alto desempeño para entornos industriales exigentes.",
-    image: "https://placehold.co/600x400",
+    image: "/images/5. SISTEMA UCRETE MF/WhatsApp Image 2025-06-27 at 11.19.46 AM.jpeg",
     hint: "industrial floor"
   },
   {
     name: "Sistemas Epóxicos",
     description: "Pisos versátiles, resistentes al deslizamiento, químicos y fáciles de limpiar para toda industria.",
-    image: "https://placehold.co/600x400",
+    image: "/images/15. SISTEMA DE SELLO EPOXICO/WhatsApp Image 2025-07-01 at 4.23.18 PM.jpeg",
     hint: "textured floor"
   },
   {
     name: "Sistemas Decorativos",
     description: "Suelos que combinan un diseño distintivo con rendimiento y durabilidad.",
-    image: "https://placehold.co/600x400",
+    image: "/images/45. PISOS LAMINADOS/WhatsApp Image 2025-07-07 at 5.35.38 PM (4).jpeg",
     hint: "modern interior"
   },
 ];
@@ -163,7 +163,7 @@ respaldan.
             </div>
             <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/quienes-somos.jpg"
+                  src="/images/2. QUIENES SOMOS/WhatsApp Image 2025-06-27 at 1.08.47 PM.jpeg"
                   alt="Equipo de LEXFOR trabajando"
                   width={600}
                   height={450}
@@ -180,7 +180,7 @@ respaldan.
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/valores.jpg"
+                  src="/images/3. NUESTROS VALORES/WhatsApp Image 2025-06-27 at 1.40.42 PM.jpeg"
                   alt="Nuestros valores"
                   width={600}
                   height={450}
@@ -229,7 +229,7 @@ respaldan.
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                src="/images/piso-epoxico.jpg"
+                src="/images/4. QUE ES UN PISO EPOXICO/WhatsApp Image 2025-06-27 at 2.14.09 PM.jpeg"
                 alt="Aplicación de piso epóxico"
                 width={600}
                 height={450}

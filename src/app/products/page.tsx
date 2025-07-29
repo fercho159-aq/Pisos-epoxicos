@@ -20,25 +20,25 @@ const productCategories = [
       {
         name: "Sistema Ucrete MF",
         description: "Recubrimiento autonivelante para pisos de alto desempeño con propiedades antiderrapantes en entornos secos. Ideal para industria manufacturera, áreas de procesados y almacenes. Excelente resistencia química, al impacto y temperaturas (-15°C a +70°C).",
-        image: "https://placehold.co/600x400",
+        image: "/images/5. SISTEMA UCRETE MF/WhatsApp Image 2025-06-27 at 11.19.46 AM.jpeg",
         hint: "factory floor",
       },
       {
         name: "Sistema Ucrete RG",
         description: "Diseñado para recubrir zoclos, trincheras, muretes de contención secundaria y bases de tanques. Resistencia química, al impacto y choques térmicos (-25°C a +130°C).",
-        image: "https://placehold.co/600x400",
+        image: "/images/6. SISTEMA UCRETE RG/WhatsApp Image 2025-06-27 at 5.59.57 PM.jpeg",
         hint: "industrial trench",
       },
       {
         name: "Sistema Ucrete UD 200",
         description: "Acabado antiderrapante con resistencia extrema a impactos, químicos y choques térmicos (-25°C a +130°C). Soporta derrames ocasionales hasta +150°C.",
-        image: "https://placehold.co/600x400",
+        image: "/images/7. SISTEMA UCRETE UD 200/WhatsApp Image 2025-06-27 at 5.59.58 PM.jpeg", 
         hint: "heavy duty floor",
       },
       {
         name: "Sistema Ucrete DP",
         description: "Superficie antiderrapante de textura fina. Alta resistencia al impacto, agentes agresivos y choques térmicos (-40°C a +120°C). Fácil limpieza.",
-        image: "https://placehold.co/600x400",
+        image: "/images/8. SISTEMA UCRETE DP/WhatsApp Image 2025-06-27 at 5.59.58 PM (1).jpeg", 
         hint: "textured industrial floor",
       },
     ],
@@ -51,37 +51,37 @@ const productCategories = [
       {
         name: "Sistema Epóxico Autonivelante",
         description: "Acabado liso para áreas limpias y producción. Opción con agregados para tránsito pesado/impactos, o sin agregados para tránsito ligero. Resistencia química y fácil limpieza.",
-        image: "https://placehold.co/600x400",
+        image: "/images/9. SISTEMA AUTONIVELANTE/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg",
         hint: "clean room floor",
       },
       {
         name: "Sistema Epóxico Cascara de Naranja",
         description: "Acabado semiderrapante con textura tipo cáscara de naranja. Ideal para almacenes, talleres y pasillos. Opciones con/sin agregados para tránsito pesado/ligero.",
-        image: "https://placehold.co/600x400",
+        image: "/images/10. SISTEMA CASCARA DE NARANJA/WhatsApp Image 2025-07-07 at 6.14.57 PM.jpeg",
         hint: "textured epoxy",
       },
       {
         name: "Sistema Epóxico Antiderrapante",
         description: "Acabado antiderrapante para áreas con contacto constante con agua/líquidos. Reduce deslizamientos peatonales/mecánicos. Refuerzo contra ataques químicos.",
-        image: "https://placehold.co/600x400",
+        image: "/images/11. SISTEMA ANTIDERRAPANTE/WhatsApp Image 2025-06-27 at 5.59.58 PM.jpeg",
         hint: "non-slip floor",
       },
       {
         name: "Sistema Epóxico Conductivo",
         description: "Descarga electricidad estática a tierra, evitando chispas. Ideal para quirófanos, laboratorios, ensamble de productos eléctricos/inflamables.",
-        image: "https://placehold.co/600x400",
+        image: "/images/12. SISTEMA CONDUCTIVO/gal1_076217929.jpg",
         hint: "operating room",
       },
       {
         name: "Sistema Epóxico de Cuarzo",
         description: "Decorativo con combinación de 2 colores. Acabado autonivelante (cuarzo encapsulado) y antiderrapante.",
-        image: "https://placehold.co/600x400",
+        image: "/images/13. SISTEMA DE CUARZO/IMG-20181102-WA0057.jpg",
         hint: "quartz floor",
       },
       {
         name: "Sistema Epóxico de Chip de Hojuela",
         description: "Decorativo con chips de colores. Acabado autonivelante (hojuela encapsulada) y texturizado.",
-        image: "https://placehold.co/600x400",
+        image: "/images/14. SISTEMA DE HOJUELA/epoxy-garage-floors-1-scaled.jpg",
         hint: "decorative flake floor",
       },
     ],
@@ -91,11 +91,11 @@ const productCategories = [
     category: "Sellos, Juntas y Soluciones Sanitarias",
     icon: <CheckCircle className="w-8 h-8 text-primary" />,
     products: [
-        { name: "Sellos Epóxicos", description: "Para mantenimiento de pisos existentes o renovación estética. Bajos espesores." },
-        { name: "Sellos de Poliuretano", description: "Capa superficial de sacrificio/protección para sistemas epóxicos. Mayor resistencia química, mecánica y a rayos UV." },
-        { name: "Tratamiento de Juntas Construcción y Control", description: "Regenera juntas mediante corte y relleno con material semi-rígido/flexible. Contrarresta movimientos estructurales." },
-        { name: "Curva Sanitaria", description: "Recubrimiento en uniones muro-muro/muro-platón (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad." },
-        { name: "Zoclo Sanitario", description: "Recubrimiento en uniones muro-piso (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad." },
+        { name: "Sellos Epóxicos", description: "Para mantenimiento de pisos existentes o renovación estética. Bajos espesores.", image: "https://placehold.co/600x400", hint: "epoxy seal" },
+        { name: "Sellos de Poliuretano", description: "Capa superficial de sacrificio/protección para sistemas epóxicos. Mayor resistencia química, mecánica y a rayos UV.", image: "https://placehold.co/600x400", hint: "polyurethane coating" },
+        { name: "Tratamiento de Juntas Construcción y Control", description: "Regenera juntas mediante corte y relleno con material semi-rígido/flexible. Contrarresta movimientos estructurales.", image: "https://placehold.co/600x400", hint: "joint treatment" },
+        { name: "Curva Sanitaria", description: "Recubrimiento en uniones muro-muro/muro-platón (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad.", image: "https://placehold.co/600x400", hint: "sanitary cove" },
+        { name: "Zoclo Sanitario", description: "Recubrimiento en uniones muro-piso (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad.", image: "https://placehold.co/600x400", hint: "sanitary base" },
     ]
   },
   {
@@ -103,11 +103,11 @@ const productCategories = [
     category: "Señalización y Muros",
     icon: <Signal className="w-8 h-8 text-primary" />,
     products: [
-        { name: "Franja Delimitadora", description: "Amarilla, roja o azul (5cm/10cm ancho) para tránsito peatonal/vehicular." },
-        { name: "Franja de Precaución", description: "Amarilla/negra (5cm/10cm ancho) para alertar riesgos y prevenir accidentes." },
-        { name: "Liso Sanitario con Pintura de Poliuretano", description: "Impermeable, fácil limpieza. Resistencia química/mecánica. Ideal farmacéutica, quirófanos, laboratorios." },
-        { name: "Liso Sanitario con Pintura Antibacterial", description: "Inhibe bacterias, hongos y virus. Ideal farmacéutica, quirófanos, laboratorios." },
-        { name: "Liso Sanitario con Fibra de Vidrio", description: "Reduce agrietamiento por movimientos estructurales. Usa pintura poliuretano/antibacterial." },
+        { name: "Franja Delimitadora", description: "Amarilla, roja o azul (5cm/10cm ancho) para tránsito peatonal/vehicular.", image: "https://placehold.co/600x400", hint: "floor marking" },
+        { name: "Franja de Precaución", description: "Amarilla/negra (5cm/10cm ancho) para alertar riesgos y prevenir accidentes.", image: "https://placehold.co/600x400", hint: "hazard stripe" },
+        { name: "Liso Sanitario con Pintura de Poliuretano", description: "Impermeable, fácil limpieza. Resistencia química/mecánica. Ideal farmacéutica, quirófanos, laboratorios.", image: "https://placehold.co/600x400", hint: "sanitary wall" },
+        { name: "Liso Sanitario con Pintura Antibacterial", description: "Inhibe bacterias, hongos y virus. Ideal farmacéutica, quirófanos, laboratorios.", image: "https://placehold.co/600x400", hint: "antibacterial paint" },
+        { name: "Liso Sanitario con Fibra de Vidrio", description: "Reduce agrietamiento por movimientos estructurales. Usa pintura poliuretano/antibacterial.", image: "https://placehold.co/600x400", hint: "fiberglass wall" },
     ]
   },
   {
@@ -115,13 +115,13 @@ const productCategories = [
     category: "Cancelería y Acabados Generales",
     icon: <Paintbrush className="w-8 h-8 text-primary" />,
     products: [
-        { name: "Puertas Sanitarias", description: "Abatibles, corredizas (simples/dobles). Cierre manual/automático. Empaque perimetral. Cristal 6mm transparente/translúcido/opaco." },
-        { name: "Ventanas Sanitarias", description: "Adaptables a medidas/anchos de muro. Cristal 6mm transparente/translúcido/opaco." },
-        { name: "Canceles Sanitarios", description: "División de áreas en aluminio natural. Paneles de cristal 6mm con sellos de silicon." },
-        { name: "Pass Box", description: "Cierre hermético, cerradura electromagnética, cristal 6mm, luz UV para eliminar bacterias/virus." },
-        { name: "Aluminio Comercial", description: "Puertas, ventanas, canceles. Varias líneas disponibles." },
-        { name: "Loseta", description: "Residencial, comercial e industrial." },
-        { name: "Pintura", description: "Vinílica, esmaltes, poliuretano." },
+        { name: "Puertas Sanitarias", description: "Abatibles, corredizas (simples/dobles). Cierre manual/automático. Empaque perimetral. Cristal 6mm transparente/translúcido/opaco.", image: "https://placehold.co/600x400", hint: "sanitary door" },
+        { name: "Ventanas Sanitarias", description: "Adaptables a medidas/anchos de muro. Cristal 6mm transparente/translúcido/opaco.", image: "https://placehold.co/600x400", hint: "sanitary window" },
+        { name: "Canceles Sanitarios", description: "División de áreas en aluminio natural. Paneles de cristal 6mm con sellos de silicon.", image: "https://placehold.co/600x400", hint: "sanitary partition" },
+        { name: "Pass Box", description: "Cierre hermético, cerradura electromagnética, cristal 6mm, luz UV para eliminar bacterias/virus.", image: "https://placehold.co/600x400", hint: "pass box" },
+        { name: "Aluminio Comercial", description: "Puertas, ventanas, canceles. Varias líneas disponibles.", image: "https://placehold.co/600x400", hint: "commercial aluminum" },
+        { name: "Loseta", description: "Residencial, comercial e industrial.", image: "https://placehold.co/600x400", hint: "floor tile" },
+        { name: "Pintura", description: "Vinílica, esmaltes, poliuretano.", image: "https://placehold.co/600x400", hint: "paint cans" },
     ]
   }
 ];
