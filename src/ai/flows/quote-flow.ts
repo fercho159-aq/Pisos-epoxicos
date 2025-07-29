@@ -39,6 +39,14 @@ const submitQuoteRequestFlow = ai.defineFlow(
   },
   async (input) => {
     console.log('Nueva solicitud de cotización recibida:', input);
+
+    if (!process.env.MAIL_HOST || !process.env.MAIL_PORT || !process.env.MAIL_USER || !process.env.MAIL_PASS || !process.env.MAIL_TO) {
+        console.error("Faltan variables de entorno para el correo.");
+        return {
+            success: false,
+            message: "El servidor de correo no está configurado. Por favor, contacte al administrador."
+        }
+    }
     
     const transporter = nodemailer.createTransport({
       host: process.env.MAIL_HOST,
@@ -51,7 +59,7 @@ const submitQuoteRequestFlow = ai.defineFlow(
     });
 
     const mailOptions = {
-      from: `"${input.name}" <${process.env.MAIL_FROM}>`,
+      from: `"${input.name}" <${process.env.MAIL_FROM || process.env.MAIL_USER}>`,
       to: process.env.MAIL_TO,
       subject: `Nueva Solicitud de Cotización de: ${input.company}`,
       html: `
