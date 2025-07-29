@@ -11,7 +11,7 @@ const sliderItems = [
     description: "Descubra las soluciones de pisos de alto rendimiento de LEXFOR, donde la resistencia se une a la estética.",
     buttonText: "Solicitar un Presupuesto",
     buttonLink: "/quote",
-    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
+    imageUrl: "/images/slider-inicio-1.jpeg",
     imageHint: "industrial factory"
   },
   {
@@ -19,8 +19,7 @@ const sliderItems = [
     description: "Sistemas de pisos epóxicos y de uretano diseñados para soportar las condiciones más exigentes.",
     buttonText: "Ver Productos",
     buttonLink: "/products",
-    imageUrl: "    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
-",
+    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
     imageHint: "modern warehouse"
   },
   {
@@ -28,7 +27,7 @@ const sliderItems = [
     description: "Soluciones de pisos decorativos que no comprometen la durabilidad.",
     buttonText: "Casos de Éxito",
     buttonLink: "/case-studies",
-    imageUrl: "https://placehold.co/1920x1080",
+    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
     imageHint: "retail store interior"
   }
 ];
@@ -123,10 +122,15 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col justify-center order-2 md:order-1">
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">
-                Líderes en Soluciones de Pisos por Más de 100 Años
+                Líderes en Soluciones de Pisos 
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                En LEXFOR, combinamos un siglo de experiencia con innovación continua para ofrecer pisos que resisten el paso del tiempo. Nuestros sistemas poliméricos sin juntas son la elección para industrias que van desde la manufactura hasta la atención médica, proporcionando seguridad, limpieza y un rendimiento duradero.
+              LEXFOR es una empresa 100% mexicana especializada de nueva generación
+que está innovando y mejorando los sistemas de recubrimientos epóxicos
+diseñados para los mercados industriales y comerciales. Somos promotores en
+el desarrollo de proyectos y soluciones de los grandes retos que el mercado
+industrial y comercial plantea. Nuestros 13 años de experiencia laborando nos
+respaldan.
               </p>
               <Link href="/case-studies">
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
@@ -137,7 +141,7 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://placehold.co/600x450"
+                  src="/images/quienes-somos.jpg"
                   alt="Equipo de LEXFOR trabajando"
                   width={600}
                   height={450}
