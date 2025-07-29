@@ -1,8 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Building2, TestTube2, Wrench, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+const sliderItems = [
+  {
+    title: "Durabilidad y Diseño en Cada Superficie",
+    description: "Descubra las soluciones de pisos de alto rendimiento de LEXFOR, donde la resistencia se une a la estética.",
+    buttonText: "Solicitar un Presupuesto",
+    buttonLink: "/quote",
+    imageUrl: "https://placehold.co/1920x1080",
+    imageHint: "industrial factory"
+  },
+  {
+    title: "Innovación en Pisos Industriales",
+    description: "Sistemas de pisos epóxicos y de uretano diseñados para soportar las condiciones más exigentes.",
+    buttonText: "Ver Productos",
+    buttonLink: "/products",
+    imageUrl: "https://placehold.co/1920x1080",
+    imageHint: "modern warehouse"
+  },
+  {
+    title: "Estética y Resistencia para Espacios Comerciales",
+    description: "Soluciones de pisos decorativos que no comprometen la durabilidad.",
+    buttonText: "Casos de Éxito",
+    buttonLink: "/case-studies",
+    imageUrl: "https://placehold.co/1920x1080",
+    imageHint: "retail store interior"
+  }
+];
 
 const featuredProducts = [
   {
@@ -46,29 +74,47 @@ const services = [
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <Image
-          src="https://placehold.co/1920x1080"
-          alt="Fondo de fábrica industrial"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
-          data-ai-hint="industrial factory"
-        />
-        <div className="relative z-20 container px-4 md:px-6">
-          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 animate-fade-in-down">
-            Durabilidad y Diseño en Cada Superficie
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-200 mb-8 animate-fade-in-up">
-            Descubra las soluciones de pisos de alto rendimiento de LEXFOR, donde la resistencia se une a la estética.
-          </p>
-          <Link href="/quote">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-6 transition-transform transform hover:scale-105">
-              Solicitar un Presupuesto
-            </Button>
-          </Link>
-        </div>
+      <section className="relative w-full h-[60vh] md:h-[70vh] group">
+        <Carousel
+          className="w-full h-full"
+          opts={{
+            loop: true,
+          }}
+        >
+          <CarouselContent className="h-full">
+            {sliderItems.map((slide, index) => (
+              <CarouselItem key={index} className="h-full">
+                <div className="relative h-full flex items-center justify-center text-center text-white">
+                  <div className="absolute inset-0 bg-black/50 z-10"></div>
+                  <Image
+                    src={slide.imageUrl}
+                    alt={slide.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="z-0"
+                    data-ai-hint={slide.imageHint}
+                    priority={index === 0}
+                  />
+                  <div className="relative z-20 container px-4 md:px-6">
+                    <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 animate-fade-in-down">
+                      {slide.title}
+                    </h1>
+                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-200 mb-8 animate-fade-in-up">
+                      {slide.description}
+                    </p>
+                    <Link href={slide.buttonLink}>
+                      <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-6 transition-transform transform hover:scale-105">
+                        {slide.buttonText}
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30 text-white bg-white/20 hover:bg-white/40 border-none group-hover:opacity-100 opacity-0 transition-opacity" />
+          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30 text-white bg-white/20 hover:bg-white/40 border-none group-hover:opacity-100 opacity-0 transition-opacity" />
+        </Carousel>
       </section>
 
       <section id="about" className="py-16 md:py-24 bg-card w-full">
