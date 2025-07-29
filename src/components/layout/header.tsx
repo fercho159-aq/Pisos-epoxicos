@@ -34,8 +34,8 @@ export function Header() {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300 text-foreground",
-      isTransparent ? "bg-transparent" : "bg-card/80 backdrop-blur-sm shadow-md"
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isTransparent ? "bg-transparent text-white" : "bg-card/80 backdrop-blur-sm shadow-md text-foreground"
     )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
@@ -51,14 +51,14 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
-                  pathname === item.href ? "text-primary font-bold" : (isTransparent ? "text-white" : "text-foreground")
+                  pathname === item.href ? "text-primary font-bold" : "text-foreground"
                 )}
               >
                 {item.label}
               </Link>
             ))}
             <Link href="/quote">
-              <Button size="sm" className={cn(isTransparent ? "bg-white text-primary hover:bg-neutral-200": "")}>
+              <Button size="sm">
                 Solicitar Presupuesto
               </Button>
             </Link>
