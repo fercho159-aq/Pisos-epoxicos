@@ -173,18 +173,12 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] bg-card text-foreground flex flex-col">
-                <SheetHeader className="p-4 border-b flex-row justify-between items-center">
+                <SheetHeader className="p-4 border-b">
                     <SheetTitle asChild>
                         <Link href="/">
                             <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={120} height={32} className="object-contain" />
                         </Link>
                     </SheetTitle>
-                    <SheetClose asChild>
-                        <Button variant="ghost" size="icon">
-                            <X className="h-6 w-6" />
-                            <span className="sr-only">Cerrar menú</span>
-                        </Button>
-                    </SheetClose>
                 </SheetHeader>
                 <div className="flex flex-col h-full overflow-y-auto">
                   <Accordion type="multiple" className="w-full">
