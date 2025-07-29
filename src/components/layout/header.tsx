@@ -53,45 +53,13 @@ const navItems = [
   { href: "/contact", label: "Contacto" },
 ];
 
-function NavLink({ href, label, subcategories, pathname }: { href: string; label: string; subcategories?: {name: string, href: string}[], pathname: string }) {
-  const [open, setOpen] = React.useState(false);
-  
-  if (subcategories) {
-    return (
-      <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger asChild>
-           <Link
-            href={href}
-            className={cn(
-              "group text-sm font-medium transition-colors hover:text-primary flex items-center gap-1",
-              pathname.startsWith(href) ? "text-primary font-bold" : ""
-            )}
-            onMouseEnter={() => setOpen(true)}
-          >
-            {label}
-            <ChevronDown className={cn("w-4 h-4 transition-transform duration-200", open ? "rotate-180" : "")} />
-          </Link>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent 
-          className="bg-card text-foreground"
-          onMouseLeave={() => setOpen(false)}
-        >
-          {subcategories.map((sub) => (
-            <DropdownMenuItem key={sub.name} asChild>
-              <Link href={sub.href} className="hover:text-primary">{sub.name}</Link>
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
-    );
-  }
-
+function NavLink({ href, label, pathname }: { href: string; label: string; pathname: string }) {
   return (
     <Link
       href={href}
       className={cn(
         "text-sm font-medium transition-colors hover:text-primary",
-        pathname === href ? "text-primary font-bold" : ""
+        pathname.startsWith(href) ? "text-primary font-bold" : ""
       )}
     >
       {label}
@@ -99,11 +67,54 @@ function NavLink({ href, label, subcategories, pathname }: { href: string; label
   );
 }
 
+function NavMenu({ 
+    label, 
+    href, 
+    subcategories, 
+    pathname 
+}: { 
+    label: string; 
+    href: string; 
+    subcategories: {name: string, href: string}[], 
+    pathname: string 
+}) {
+  const [open, setOpen] = React.useState(false);
+  
+  return (
+    <div className="flex items-center gap-1" onMouseLeave={() => setOpen(false)}>
+      <Link
+        href={href}
+        className={cn(
+          "text-sm font-medium transition-colors hover:text-primary",
+          pathname.startsWith(href) ? "text-primary font-bold" : ""
+        )}
+      >
+        {label}
+      </Link>
+      <DropdownMenu open={open} onOpenChange={setOpen}>
+        <DropdownMenuTrigger asChild onMouseEnter={() => setOpen(true)}>
+          <Button variant="ghost" size="icon" className="h-6 w-6">
+            <ChevronDown className={cn("w-4 h-4 transition-transform duration-200", open ? "rotate-180" : "")} />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent 
+          align="start"
+          className="bg-card text-foreground"
+        >
+          {subcategories.map((sub) => (
+            <DropdownMenuItem key={sub.name} asChild>
+              <Link href={sub.href}>{sub.name}</Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+  );
+}
 
 export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
-  const isHomePage = pathname === "/";
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -116,32 +127,36 @@ export function Header() {
 
   const headerClasses = cn(
     "sticky top-0 z-50 w-full transition-all duration-300",
-    isHomePage && !isScrolled ? "bg-transparent text-white" : "bg-card/80 backdrop-blur-sm shadow-md text-foreground"
+    isScrolled ? "bg-card/80 backdrop-blur-sm shadow-md text-foreground" : "bg-transparent text-foreground"
   );
   
-  const linkClasses = cn(
-      "text-sm font-medium transition-colors hover:text-primary",
-       (isHomePage && !isScrolled) ? "text-white" : "text-foreground"
-  );
-
   return (
     <header className={headerClasses}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Layers className="h-7 w-7 text-primary" />
-            <span className={cn("font-headline text-2xl font-bold", (isHomePage && !isScrolled) ? "text-white" : "text-foreground")}>LEXFOR</span>
+            <span className="font-headline text-2xl font-bold">LEXFOR</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-               <NavLink
-                key={item.href}
-                href={item.href}
-                label={item.label}
-                subcategories={item.subcategories}
-                pathname={pathname}
-              />
+              item.subcategories ? (
+                <NavMenu
+                  key={item.href}
+                  href={item.href}
+                  label={item.label}
+                  subcategories={item.subcategories}
+                  pathname={pathname}
+                />
+              ) : (
+                <NavLink
+                  key={item.href}
+                  href={item.href}
+                  label={item.label}
+                  pathname={pathname}
+                />
+              )
             ))}
              <Link href="/quote">
                 <Button size="sm">
@@ -177,18 +192,18 @@ export function Header() {
                   <Accordion type="multiple" className="w-full">
                     {navItems.map((item) => (
                       item.subcategories ? (
-                        <AccordionItem value={item.label} key={item.label} className="border-b px-4">
-                          <AccordionTrigger className={cn("text-lg font-medium hover:no-underline", pathname.startsWith(item.href) ? "text-primary" : "")}>
+                        <AccordionItem value={item.label} key={item.label} className="border-b">
+                          <AccordionTrigger className={cn("text-lg font-medium hover:no-underline px-4 py-4", pathname.startsWith(item.href) ? "text-primary" : "")}>
                             {item.label}
                           </AccordionTrigger>
                           <AccordionContent className="pl-4">
                             <nav className="flex flex-col gap-2">
                               <SheetClose asChild>
-                                <Link href={item.href} className="pb-2 text-base font-medium text-muted-foreground border-b">Ver todos</Link>
+                                <Link href={item.href} className="px-4 py-2 text-base font-medium text-muted-foreground border-b">Ver todos</Link>
                               </SheetClose>
                               {item.subcategories.map(sub => (
                                 <SheetClose asChild key={sub.name}>
-                                  <Link href={sub.href} className="pt-2 text-base text-muted-foreground">{sub.name}</Link>
+                                  <Link href={sub.href} className="px-4 py-2 text-base text-muted-foreground">{sub.name}</Link>
                                 </SheetClose>
                               ))}
                             </nav>
