@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Building2, TestTube2, Wrench, ChevronRight } from "lucide-react";
+import { Building2, TestTube2, Wrench, ChevronRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ const sliderItems = [
     description: "Descubra las soluciones de pisos de alto rendimiento de LEXFOR, donde la resistencia se une a la estética.",
     buttonText: "Solicitar un Presupuesto",
     buttonLink: "/quote",
-    imageUrl: "/images/slider-inicio-1.jpeg",
+    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg",
     imageHint: "industrial factory"
   },
   {
@@ -19,7 +19,7 @@ const sliderItems = [
     description: "Sistemas de pisos epóxicos y de uretano diseñados para soportar las condiciones más exigentes.",
     buttonText: "Ver Productos",
     buttonLink: "/products",
-    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
+    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg",
     imageHint: "modern warehouse"
   },
   {
@@ -27,7 +27,7 @@ const sliderItems = [
     description: "Soluciones de pisos decorativos que no comprometen la durabilidad.",
     buttonText: "Casos de Éxito",
     buttonLink: "/case-studies",
-    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
+    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg",
     imageHint: "retail store interior"
   }
 ];
@@ -69,6 +69,16 @@ const services = [
     name: "Consultoría de Proyectos",
     description: "Le ayudamos a seleccionar la solución de piso ideal para sus necesidades específicas.",
   },
+];
+
+const values = [
+    "Enfoque al cliente",
+    "Innovación",
+    "Espíritu de equipo",
+    "Servicio",
+    "Profesionalismo",
+    "Honestidad",
+    "Confianza"
 ];
 
 export default function Home() {
@@ -141,13 +151,43 @@ respaldan.
             </div>
             <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/quienes-somos.jpg"
+                  src="/images/2. QUIENES SOMOS/WhatsApp Image 2025-06-27 at 1.08.47 PM.jpeg"
                   alt="Equipo de LEXFOR trabajando"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
                   data-ai-hint="construction team"
                 />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="values" className="py-16 md:py-24 bg-background w-full">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/valores.jpg"
+                  alt="Nuestros valores"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                  data-ai-hint="team collaboration"
+                />
+            </div>
+            <div className="flex flex-col justify-center">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">
+                Nuestros Valores
+              </h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-lg">
+                {values.map((value) => (
+                    <li key={value} className="flex items-center gap-3">
+                        <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                        <span>{value}</span>
+                    </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
