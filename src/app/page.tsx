@@ -11,7 +11,7 @@ const sliderItems = [
     description: "Descubra las soluciones de pisos de alto rendimiento de LEXFOR, donde la resistencia se une a la estética.",
     buttonText: "Solicitar un Presupuesto",
     buttonLink: "/quote",
-    imageUrl: "https://placehold.co/1920x1080",
+    imageUrl: "/images/banner-pisos-industriales.jpg", // <-- IMAGEN LOCAL
     imageHint: "industrial factory"
   },
   {
