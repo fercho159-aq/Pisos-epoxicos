@@ -5,52 +5,80 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Users, Wrench, Microscope, ChevronDown } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { CheckCircle, HardHat, Wind, Sparkles, Building, Layers } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const services = [
   {
-    value: "consultoria",
-    title: "Consultoría y Especificación de Proyectos",
-    icon: <Microscope className="w-12 h-12 text-primary" />,
+    value: "hvac",
+    title: "Sistemas HVAC",
+    icon: <Wind className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
-    hint: "architect blueprint",
-    description: "Nuestro proceso comienza con una comprensión profunda de su entorno y sus necesidades. Nuestros representantes territoriales y arquitectónicos trabajan con usted para especificar la solución de piso correcta que cumpla con sus requisitos de rendimiento y diseño.",
+    hint: "hvac system",
+    description: "Ofrecemos proyectos integrales y mantenimientos preventivos/correctivos para sistemas de climatización, garantizando el control de temperatura, humedad en el aire, y los sistemas de fuerza y control necesarios.",
     details: [
-      "Análisis de las condiciones del sustrato existente.",
-      "Evaluación de requisitos de tráfico, químicos y temperatura.",
-      "Selección de color, textura y acabado final.",
-      "Preparación de especificaciones detalladas para licitaciones."
+      "Proyectos integrales de HVAC.",
+      "Mantenimiento preventivo y correctivo.",
+      "Control de temperatura y humedad.",
+      "Instalación de sistemas de fuerza y control."
     ]
   },
   {
-    value: "aplicacion",
-    title: "Aplicación e Instalación Profesional",
-    icon: <Users className="w-12 h-12 text-primary" />,
+    value: "obra-civil",
+    title: "Obra Civil",
+    icon: <HardHat className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
-    hint: "construction workers",
-    description: "Una instalación impecable es clave para la longevidad de su piso. LEXFOR se enorgullece de tener equipos de aplicación directa y altamente capacitados que gestionan cada proyecto de principio a fin, asegurando una calidad y responsabilidad inigualables.",
+    hint: "construction site",
+    description: "Realizamos una amplia gama de trabajos de obra civil, desde la preparación del terreno hasta la construcción de estructuras de concreto, asegurando una base sólida para cualquier proyecto.",
     details: [
-      "Gestión de proyectos de un solo punto de contacto.",
-      "Equipos de instalación directa, no subcontratistas.",
-      "Preparación de superficie de última generación.",
-      "Garantía única que cubre tanto materiales como mano de obra."
+      "Levantamiento topográfico.",
+      "Trabajos de terracerías.",
+      "Cimentaciones y desplantes.",
+      "Muros, firmes y losas de concreto."
     ]
   },
   {
-    value: "mantenimiento",
-    title: "Mantenimiento y Soporte Continuo",
-    icon: <Wrench className="w-12 h-12 text-primary" />,
+    value: "estructuras",
+    title: "Estructuras Metálicas y Techumbres",
+    icon: <Building className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
-    hint: "floor cleaning",
-    description: "Nuestros pisos están diseñados para durar, pero un cuidado adecuado puede extender aún más su vida útil. Ofrecemos productos de limpieza y guías de mantenimiento para ayudarle a mantener su piso en óptimas condiciones, protegiendo su inversión a largo plazo.",
+    hint: "metal structure",
+    description: "Diseñamos e instalamos estructuras metálicas y techumbres de alta calidad, adaptadas a las necesidades específicas de su proyecto, garantizando seguridad y durabilidad.",
     details: [
-      "Productos de limpieza especialmente formulados.",
-      "Guías de mantenimiento y procedimientos de reparación.",
-      "Soporte técnico para cualquier consulta post-instalación.",
-      "Inspecciones periódicas y programas de mantenimiento preventivo."
+        "Diseño estructural personalizado.",
+        "Fabricación de componentes metálicos.",
+        "Montaje e instalación en sitio.",
+        "Soluciones de techumbres industriales y comerciales."
+    ]
+  },
+  {
+    value: "tablaroca",
+    title: "Tablaroca",
+    icon: <Layers className="w-12 h-12 text-primary" />,
+    image: "https://placehold.co/600x400",
+    hint: "drywall installation",
+    description: "Nos especializamos en la instalación de muros divisorios, plafones corridos y lambrines de tablaroca, ofreciendo soluciones versátiles y de rápida instalación para interiores.",
+    details: [
+        "Instalación de muros de tablaroca.",
+        "Creación de plafones lisos y decorativos.",
+        "Lambrines y recubrimientos de muros.",
+        "Acabados listos para pintura."
+    ]
+  },
+  {
+    value: "dpa",
+    title: "DPA (Pulido y Abrillantado)",
+    icon: <Sparkles className="w-12 h-12 text-primary" />,
+    image: "https://placehold.co/600x400",
+    hint: "polished concrete floor",
+    description: "Transformamos pisos de concreto mediante un proceso de desbaste, pulido y abrillantado que mejora drásticamente su apariencia y durabilidad, exponiendo los agregados finos o gruesos para un acabado estético.",
+    details: [
+        "Desbaste de superficies de concreto.",
+        "Pulido para un acabado liso y uniforme.",
+        "Abrillantado para un brillo duradero.",
+        "Mejora de la resistencia y facilidad de limpieza."
     ]
   }
 ];
@@ -70,7 +98,7 @@ export default function ServicesPage() {
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible defaultValue="consultoria" className="w-full space-y-8">
+            <Accordion type="single" collapsible defaultValue="hvac" className="w-full space-y-8">
               {services.map((service) => (
                 <AccordionItem value={service.value} key={service.value} className="border-none">
                   <Card className="overflow-hidden shadow-lg transition-all duration-300">
