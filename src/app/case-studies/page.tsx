@@ -52,7 +52,7 @@ export default function CaseStudiesPage() {
   return (
     <div className="bg-background">
       <section className="py-12 md:py-20 text-center bg-card border-b">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Casos de Éxito</h1>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
             Vea cómo hemos resuelto los desafíos de pisos más exigentes para clientes en todo México.
@@ -61,7 +61,7 @@ export default function CaseStudiesPage() {
       </section>
 
       <section className="py-12 md:py-20">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             {caseStudies.map((study) => (
               <Card key={study.title} className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
@@ -107,7 +107,7 @@ export default function CaseStudiesPage() {
       </section>
 
        <section className="py-12 md:py-20 bg-primary/10">
-        <div className="container text-center">
+        <div className="container mx-auto text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">¿Tiene un desafío similar?</h2>
             <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4 mb-8">
                 Nuestro equipo de expertos puede diseñar una solución a la medida de su proyecto.

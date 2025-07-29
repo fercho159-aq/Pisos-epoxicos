@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <div className="bg-background">
       <section className="py-12 md:py-20 text-center bg-card border-b">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Contacto</h1>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
             Estamos listos para ayudarle. Póngase en contacto con nosotros a través de cualquiera de los siguientes medios.
@@ -17,7 +17,7 @@ export default function ContactPage() {
       </section>
 
       <section className="py-12 md:py-20">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             <div className="md:col-span-1 space-y-8">
               <div className="flex items-start gap-4">

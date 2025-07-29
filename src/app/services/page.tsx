@@ -59,7 +59,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-background">
       <section className="py-12 md:py-20 text-center bg-card border-b">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Nuestros Servicios</h1>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
             En Stonhard, ofrecemos una solución integral que va más allá de los materiales. Somos su socio de principio a fin.
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="py-12 md:py-20">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible defaultValue="consultoria" className="w-full space-y-8">
               {services.map((service) => (
@@ -121,7 +121,7 @@ export default function ServicesPage() {
       </section>
       
       <section className="py-12 md:py-20 bg-card">
-        <div className="container text-center">
+        <div className="container mx-auto text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">¿Listo para comenzar su proyecto?</h2>
             <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4 mb-8">
                 Nuestro equipo está listo para ayudarle a encontrar la solución perfecta. Contáctenos hoy para una consulta gratuita.
