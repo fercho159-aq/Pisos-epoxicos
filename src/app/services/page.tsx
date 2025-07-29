@@ -31,7 +31,7 @@ const services = [
     icon: <Users className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
     hint: "construction workers",
-    description: "Una instalación impecable es clave para la longevidad de su piso. Stonhard se enorgullece de tener equipos de aplicación directa y altamente capacitados que gestionan cada proyecto de principio a fin, asegurando una calidad y responsabilidad inigualables.",
+    description: "Una instalación impecable es clave para la longevidad de su piso. LEXFOR se enorgullece de tener equipos de aplicación directa y altamente capacitados que gestionan cada proyecto de principio a fin, asegurando una calidad y responsabilidad inigualables.",
     details: [
       "Gestión de proyectos de un solo punto de contacto.",
       "Equipos de instalación directa, no subcontratistas.",
@@ -45,7 +45,7 @@ const services = [
     icon: <Wrench className="w-12 h-12 text-primary" />,
     image: "https://placehold.co/600x400",
     hint: "floor cleaning",
-    description: "Nuestros pisos están diseñados para durar, pero un cuidado adecuado puede extender aún más su vida útil. Ofrecemos productos de limpieza Stonkleen y guías de mantenimiento para ayudarle a mantener su piso en óptimas condiciones, protegiendo su inversión a largo plazo.",
+    description: "Nuestros pisos están diseñados para durar, pero un cuidado adecuado puede extender aún más su vida útil. Ofrecemos productos de limpieza y guías de mantenimiento para ayudarle a mantener su piso en óptimas condiciones, protegiendo su inversión a largo plazo.",
     details: [
       "Productos de limpieza especialmente formulados.",
       "Guías de mantenimiento y procedimientos de reparación.",
@@ -62,7 +62,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Nuestros Servicios</h1>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
-            En Stonhard, ofrecemos una solución integral que va más allá de los materiales. Somos su socio de principio a fin.
+            En LEXFOR, ofrecemos una solución integral que va más allá de los materiales. Somos su socio de principio a fin.
           </p>
         </div>
       </section>

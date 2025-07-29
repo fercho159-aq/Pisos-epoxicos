@@ -38,7 +38,7 @@ export default function QuotePage() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg">Soporte Directo</h3>
-                        <p className="text-muted-foreground">¿Prefiere hablar por teléfono? Llámenos al 800-STONHARD.</p>
+                        <p className="text-muted-foreground">¿Prefiere hablar por teléfono? Llámenos al 800-786-6427.</p>
                     </div>
                 </div>
               </div>

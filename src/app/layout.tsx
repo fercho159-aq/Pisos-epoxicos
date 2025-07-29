@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "StoneLook - Stonhard México",
+  title: "LEXFOR S.A DE C.V",
   description: "Soluciones de pisos industriales y comerciales de alto rendimiento.",
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow w-full">{children}</main>
+        <main className="w-full">{children}</main>
         <Footer />
         <Toaster />
       </body>

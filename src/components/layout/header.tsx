@@ -39,7 +39,7 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Layers className="h-7 w-7 text-primary" />
-            <span className="font-headline text-2xl font-bold">StoneLook</span>
+            <span className="font-headline text-2xl font-bold">LEXFOR</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -75,7 +75,7 @@ export function Header() {
                     <SheetTitle asChild>
                         <Link href="/" className="flex items-center gap-2">
                             <Layers className="h-6 w-6 text-primary" />
-                            <span className="font-headline text-xl font-bold">StoneLook</span>
+                            <span className="font-headline text-xl font-bold">LEXFOR</span>
                         </Link>
                     </SheetTitle>
                     <SheetClose asChild>

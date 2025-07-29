@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2 mb-2">
                 <Layers className="h-7 w-7 text-primary" />
-                <span className="font-headline text-2xl font-bold">StoneLook</span>
+                <span className="font-headline text-2xl font-bold">LEXFOR</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
                 Proporcionando soluciones de pisos de alto rendimiento para los entornos más exigentes de México.
@@ -51,7 +51,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} StoneLook - Stonhard México. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} LEXFOR S.A DE C.V. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
