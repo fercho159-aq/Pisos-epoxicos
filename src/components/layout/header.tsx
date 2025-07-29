@@ -30,10 +30,12 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isTransparent = isHomePage && !isScrolled;
+
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
-      (isScrolled || !isHomePage) ? "bg-card/80 backdrop-blur-sm shadow-md text-foreground" : "bg-transparent text-white"
+      isTransparent ? "bg-transparent text-white" : "bg-card/80 backdrop-blur-sm shadow-md text-foreground"
     )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
@@ -56,7 +58,7 @@ export function Header() {
               </Link>
             ))}
             <Link href="/quote">
-              <Button size="sm" className={cn(isHomePage && !isScrolled ? "bg-white text-primary hover:bg-neutral-200": "")}>
+              <Button size="sm" className={cn(isTransparent ? "bg-white text-primary hover:bg-neutral-200": "")}>
                 Solicitar Presupuesto
               </Button>
             </Link>
