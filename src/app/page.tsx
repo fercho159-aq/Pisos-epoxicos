@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -206,37 +207,35 @@ respaldan.
 
       <section id="epoxy-info" className="py-16 md:py-24 bg-card w-full">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="flex flex-col justify-center">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 uppercase">
-                ¿Qué es un piso epóxico?
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6">
-                Los pisos epóxicos son una solución de revestimiento de alta resistencia y durabilidad que se utiliza comúnmente en una variedad de entornos, desde instalaciones industriales hasta espacios comerciales y residenciales. La clave de su fortaleza radica en la composición de estos pisos para concretos. Están fabricados a partir de resinas epóxicas, que son polímeros termoestables, lo que significa que se endurecen de forma permanente cuando se mezclan con un agente endurecedor adecuado. Esta reacción química crea una superficie sólida, densa y excepcionalmente resistente al tráfico constante de personas, vehículos y productos químicos.
-              </p>
+          <div className="mb-12">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 uppercase text-center">
+              ¿Qué es un piso epóxico?
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-4xl mx-auto text-center">
+              Los pisos epóxicos son una solución de revestimiento de alta resistencia y durabilidad que se utiliza comúnmente en una variedad de entornos, desde instalaciones industriales hasta espacios comerciales y residenciales. La clave de su fortaleza radica en la composición de estos pisos para concretos. Están fabricados a partir de resinas epóxicas, que son polímeros termoestables, lo que significa que se endurecen de forma permanente cuando se mezclan con un agente endurecedor adecuado. Esta reacción química crea una superficie sólida, densa y excepcionalmente resistente al tráfico constante de personas, vehículos y productos químicos.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 className="font-headline text-2xl font-bold mb-6 uppercase">Ventajas de un Piso Epóxico</h3>
+                <ul className="grid grid-cols-1 gap-y-4 text-base">
+                    {epoxyAdvantages.map((advantage) => (
+                        <li key={advantage} className="flex items-start gap-3">
+                            <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                            <span>{advantage}</span>
+                        </li>
+                    ))}
+                </ul>
             </div>
-            <div className="space-y-8">
-                <div className="rounded-lg overflow-hidden shadow-lg">
-                    <Image
-                    src="/images/piso-epoxico.jpg"
-                    alt="Aplicación de piso epóxico"
-                    width={600}
-                    height={450}
-                    className="w-full h-auto object-cover"
-                    data-ai-hint="epoxy floor application"
-                    />
-                </div>
-                <div>
-                    <h3 className="font-headline text-2xl font-bold mb-4 uppercase">Ventajas de un Piso Epóxico</h3>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6 text-base">
-                        {epoxyAdvantages.map((advantage) => (
-                            <li key={advantage} className="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                                <span>{advantage}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+                <Image
+                src="/images/piso-epoxico.jpg"
+                alt="Aplicación de piso epóxico"
+                width={600}
+                height={450}
+                className="w-full h-auto object-cover"
+                data-ai-hint="epoxy floor application"
+                />
             </div>
           </div>
         </div>
@@ -313,3 +312,5 @@ respaldan.
     </div>
   );
 }
+
+    
