@@ -9,6 +9,7 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import nodemailer from 'nodemailer';
 
 const QuoteRequestInputSchema = z.object({
   name: z.string().describe('El nombre completo del cliente.'),
@@ -37,14 +38,47 @@ const submitQuoteRequestFlow = ai.defineFlow(
     outputSchema: QuoteRequestOutputSchema,
   },
   async (input) => {
-    // En una aplicación real, aquí se enviarían los datos a un CRM,
-    // a una base de datos o se notificaría por correo electrónico.
-    console.log('Nueva solicitud de cotización recibida:');
-    console.log(input);
+    console.log('Nueva solicitud de cotización recibida:', input);
+    
+    const transporter = nodemailer.createTransport({
+      host: process.env.MAIL_HOST,
+      port: Number(process.env.MAIL_PORT),
+      secure: Number(process.env.MAIL_PORT) === 465, // true for 465, false for other ports
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+    });
 
-    return {
-      success: true,
-      message: 'Solicitud de cotización recibida con éxito.',
+    const mailOptions = {
+      from: `"${input.name}" <${process.env.MAIL_FROM}>`,
+      to: process.env.MAIL_TO,
+      subject: `Nueva Solicitud de Cotización de: ${input.company}`,
+      html: `
+        <h1>Nueva Solicitud de Cotización</h1>
+        <p><strong>Nombre:</strong> ${input.name}</p>
+        <p><strong>Empresa:</strong> ${input.company}</p>
+        <p><strong>Email:</strong> ${input.email}</p>
+        <p><strong>Teléfono:</strong> ${input.phone}</p>
+        <p><strong>Industria:</strong> ${input.industry}</p>
+        <h2>Detalles del Proyecto</h2>
+        <p>${input.projectDetails}</p>
+      `,
     };
+
+    try {
+      await transporter.sendMail(mailOptions);
+      console.log('Correo de cotización enviado con éxito');
+      return {
+        success: true,
+        message: 'Solicitud de cotización recibida con éxito. Un representante se pondrá en contacto con usted en breve.',
+      };
+    } catch (error) {
+      console.error('Error al enviar el correo:', error);
+      return {
+        success: false,
+        message: 'Hubo un problema al enviar su solicitud. Por favor, inténtelo de nuevo.',
+      };
+    }
   }
 );
