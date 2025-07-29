@@ -11,7 +11,7 @@ const sliderItems = [
     description: "Descubra las soluciones de pisos de alto rendimiento de LEXFOR, donde la resistencia se une a la estética.",
     buttonText: "Solicitar un Presupuesto",
     buttonLink: "/quote",
-    imageUrl: "/images/banner-pisos-industriales.jpg", // <-- IMAGEN LOCAL
+    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
     imageHint: "industrial factory"
   },
   {
@@ -19,7 +19,8 @@ const sliderItems = [
     description: "Sistemas de pisos epóxicos y de uretano diseñados para soportar las condiciones más exigentes.",
     buttonText: "Ver Productos",
     buttonLink: "/products",
-    imageUrl: "https://placehold.co/1920x1080",
+    imageUrl: "    imageUrl: "/images/1. INICIO/WhatsApp Image 2025-06-27 at 11.18.16 AM.jpeg", // <-- IMAGEN LOCAL
+",
     imageHint: "modern warehouse"
   },
   {
