@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Users, Wrench, Microscope } from "lucide-react";
+import { CheckCircle, Users, Wrench, Microscope, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -74,7 +74,7 @@ export default function ServicesPage() {
               {services.map((service) => (
                 <AccordionItem value={service.value} key={service.value} className="border-none">
                   <Card className="overflow-hidden shadow-lg transition-all duration-300">
-                    <AccordionTrigger className="p-0 hover:no-underline [&[data-state=open]>div>h3]:text-primary">
+                    <AccordionTrigger className="p-0 hover:no-underline [&[data-state=open]>div>h3]:text-primary group">
                        <div className="flex flex-col md:flex-row items-center text-left w-full">
                          <div className="p-6 flex-shrink-0">{service.icon}</div>
                          <div className="p-6 pt-0 md:pt-6">
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                          </div>
                          <div className="p-6 ml-auto">
                             <div className="p-2 rounded-full bg-gray-100 group-data-[state=open]:rotate-180 transition-transform">
-                                <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <ChevronDown className="w-6 h-6 text-gray-500" />
                             </div>
                          </div>
                        </div>

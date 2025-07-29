@@ -23,7 +23,7 @@ const caseStudies = [
     image: "https://placehold.co/800x500",
     hint: "hospital corridor",
     challenge: "El área quirúrgica requería un piso sin juntas, aséptico, fácil de limpiar y que resistiera productos químicos de limpieza agresivos y el tráfico de camillas.",
-    solution: "Se aplicó Stonres RTZ, un sistema resiliente y ergonómico con un acabado decorativo y sin juntas. Su composición bacteriostática y fungistática es ideal para entornos estériles.",
+    solution: "Se aplicó Stonres RTZ, un sistema resiliente y ergonómico con un acabado decorativo y sin juntas.Su composición bacteriostática y fungistática es ideal para entornos estériles.",
     products: ["Stonres RTZ"],
   },
   {
