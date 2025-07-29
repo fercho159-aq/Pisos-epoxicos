@@ -16,7 +16,7 @@ const services = [
     id: "hvac",
     title: "Sistemas HVAC",
     icon: <Wind className="w-12 h-12 text-primary" />,
-    image: "https://placehold.co/600x400",
+    image: "/images/37. HVAC/8wp8z2v7-900.jpg",
     hint: "hvac system",
     description: "Ofrecemos proyectos integrales y mantenimientos preventivos/correctivos para sistemas de climatización, garantizando el control de temperatura, humedad en el aire, y los sistemas de fuerza y control necesarios.",
     details: [
@@ -31,7 +31,7 @@ const services = [
     id: "obra-civil",
     title: "Obra Civil",
     icon: <HardHat className="w-12 h-12 text-primary" />,
-    image: "https://placehold.co/600x400",
+    image: "/images/41. OBRA CIVIL/WhatsApp Image 2025-07-07 at 1.15.03 PM (1).jpeg",
     hint: "construction site",
     description: "Realizamos una amplia gama de trabajos de obra civil, desde la preparación del terreno hasta la construcción de estructuras de concreto, asegurando una base sólida para cualquier proyecto.",
     details: [
@@ -46,7 +46,7 @@ const services = [
     id: "estructuras",
     title: "Estructuras Metálicas y Techumbres",
     icon: <Building className="w-12 h-12 text-primary" />,
-    image: "https://placehold.co/600x400",
+    image: "/images/42. ESTRUCTURAS METALICAS/WhatsApp Image 2025-07-07 at 3.17.29 PM (5).jpeg",
     hint: "metal structure",
     description: "Diseñamos e instalamos estructuras metálicas y techumbres de alta calidad, adaptadas a las necesidades específicas de su proyecto, garantizando seguridad y durabilidad.",
     details: [
@@ -61,7 +61,7 @@ const services = [
     id: "tablaroca",
     title: "Tablaroca",
     icon: <Layers className="w-12 h-12 text-primary" />,
-    image: "https://placehold.co/600x400",
+    image: "/images/36. TABLARROCA/WhatsApp Image 2025-07-03 at 10.59.38 AM.jpeg",
     hint: "drywall installation",
     description: "Nos especializamos en la instalación de muros divisorios, plafones corridos y lambrines de tablaroca, ofreciendo soluciones versátiles y de rápida instalación para interiores.",
     details: [
@@ -76,7 +76,7 @@ const services = [
     id: "dpa",
     title: "DPA (Pulido y Abrillantado)",
     icon: <Sparkles className="w-12 h-12 text-primary" />,
-    image: "https://placehold.co/600x400",
+    image: "/images/20. DPA/WhatsApp Image 2025-07-01 at 5.16.37 PM.jpeg",
     hint: "polished concrete floor",
     description: "Transformamos pisos de concreto mediante un proceso de desbaste, pulido y abrillantado que mejora drásticamente su apariencia y durabilidad, exponiendo los agregados finos o gruesos para un acabado estético.",
     details: [
