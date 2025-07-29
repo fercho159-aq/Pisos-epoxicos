@@ -78,25 +78,24 @@ function NavMenu({
     subcategories: {name: string, href: string}[], 
     pathname: string 
 }) {
-  const [open, setOpen] = React.useState(false);
-  
   return (
-    <div className="flex items-center gap-1" onMouseLeave={() => setOpen(false)}>
-      <Link
-        href={href}
-        className={cn(
-          "text-sm font-medium transition-colors hover:text-primary",
-          pathname.startsWith(href) ? "text-primary font-bold" : ""
-        )}
-      >
-        {label}
-      </Link>
-      <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger asChild onMouseEnter={() => setOpen(true)}>
-          <Button variant="ghost" size="icon" className="h-6 w-6">
-            <ChevronDown className={cn("w-4 h-4 transition-transform duration-200", open ? "rotate-180" : "")} />
-          </Button>
-        </DropdownMenuTrigger>
+    <DropdownMenu>
+        <div className="flex items-center gap-1">
+            <Link
+                href={href}
+                className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                pathname.startsWith(href) ? "text-primary font-bold" : ""
+                )}
+            >
+                {label}
+            </Link>
+            <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="h-6 w-6 data-[state=open]:rotate-180">
+                    <ChevronDown className="w-4 h-4 transition-transform duration-200" />
+                </Button>
+            </DropdownMenuTrigger>
+        </div>
         <DropdownMenuContent 
           align="start"
           className="bg-card text-foreground"
@@ -108,7 +107,6 @@ function NavMenu({
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
-    </div>
   );
 }
 
