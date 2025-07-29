@@ -45,7 +45,7 @@ const services = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <Image
@@ -71,8 +71,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-16 md:py-24 bg-card">
-        <div className="container px-4 md:px-6">
+      <section id="about" className="py-16 md:py-24 bg-card w-full">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">
@@ -102,10 +102,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="products" className="py-16 md:py-24">
-        <div className="container px-4 md:px-6 text-center">
+      <section id="products" className="py-16 md:py-24 w-full">
+        <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Nuestro Catálogo de Productos</h2>
-            <p className="text-muted-foreground text-lg mb-12">
+            <p className="text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
               Explora nuestra gama de sistemas de pisos, diseñados para cumplir con los más altos estándares de rendimiento y estética.
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -142,8 +142,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="py-16 md:py-24 bg-card">
-        <div className="container px-4 md:px-6">
+      <section id="services" className="py-16 md:py-24 bg-card w-full">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Servicios Integrales</h2>
             <p className="text-muted-foreground text-lg mb-12">

@@ -119,9 +119,9 @@ const specialtyProducts = [
 
 export default function ProductsPage() {
   return (
-    <div className="bg-background">
+    <div className="bg-background w-full">
       <section className="py-12 md:py-20 text-center bg-card border-b">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Catálogo de Productos</h1>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
             Descubra la solución de piso perfecta para sus necesidades. Cada uno de nuestros sistemas está diseñado para ofrecer un rendimiento y una durabilidad excepcionales.
@@ -130,7 +130,7 @@ export default function ProductsPage() {
       </section>
 
       <section className="py-12 md:py-20">
-        <div className="container px-4 md:px-6 space-y-16">
+        <div className="container mx-auto px-4 md:px-6 space-y-16">
           {products.map((product, index) => (
             <Card key={product.name} className="overflow-hidden shadow-lg" id={product.name.toLowerCase()}>
               <div className="grid md:grid-cols-2">
@@ -192,7 +192,7 @@ export default function ProductsPage() {
       </section>
 
       <section className="py-12 md:py-20 bg-card">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Soluciones Especializadas</h2>
                 <p className="text-muted-foreground text-lg mb-12">

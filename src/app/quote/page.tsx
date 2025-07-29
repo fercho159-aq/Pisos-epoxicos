@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function QuotePage() {
   return (
-    <div className="bg-background">
+    <div className="bg-background w-full">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
