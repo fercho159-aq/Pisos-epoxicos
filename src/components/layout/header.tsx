@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import {
@@ -135,7 +135,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={70} height={40} className="object-contain" />
+            <Image src="/images/logo.png" alt="LEXFOR Logo" width={70} height={40} className="object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -162,6 +162,11 @@ export function Header() {
                   Solicitar Presupuesto
                 </Button>
               </Link>
+             <Link href="https://www.facebook.com/share/1B9V5FwnU3/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Button variant="ghost" size="icon">
+                    <Facebook className="h-5 w-5" />
+                </Button>
+            </Link>
           </nav>
 
           <div className="md:hidden">
@@ -175,9 +180,11 @@ export function Header() {
               <SheetContent side="right" className="w-[300px] bg-card text-foreground flex flex-col">
                 <SheetHeader className="p-4 border-b">
                     <SheetTitle asChild>
+                       <div className="flex justify-between items-center">
                         <Link href="/">
-                            <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={120} height={32} className="object-contain" />
+                            <Image src="/images/logo.png" alt="LEXFOR Logo" width={120} height={32} className="object-contain" />
                         </Link>
+                      </div>
                     </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col h-full overflow-y-auto">
@@ -218,6 +225,13 @@ export function Header() {
                   </Accordion>
                   
                   <div className="mt-auto p-4">
+                     <div className="flex items-center justify-center gap-4 mb-4">
+                        <Link href="https://www.facebook.com/share/1B9V5FwnU3/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <Button variant="ghost" size="icon">
+                                <Facebook className="h-6 w-6 text-primary" />
+                            </Button>
+                        </Link>
+                    </div>
                     <SheetClose asChild>
                         <Link href="/quote" className="w-full">
                             <Button className="w-full" size="lg">Solicitar Presupuesto</Button>
