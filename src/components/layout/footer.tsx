@@ -11,6 +11,7 @@ export function Footer() {
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2 mb-2">
                 <Image src="/images/logo.png" alt="LEXFOR Logo" width={130} height={60} className="object-contain" />
+                <span className="font-bold text-xs uppercase text-foreground/80">Aplicaciones Epoxicas<br/>Garantizadas<br/>Lexfor S.A de C.V</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
                 Proporcionando soluciones de pisos de alto rendimiento para los entornos más exigentes de México.
