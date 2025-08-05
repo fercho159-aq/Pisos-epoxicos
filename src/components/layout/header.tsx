@@ -133,9 +133,9 @@ export function Header() {
   return (
     <header className={headerClasses}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={130} height={40} className="object-contain" />
+            <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={216} height={80} className="object-contain" />
             <span className="font-bold text-xs uppercase hidden xl:block text-foreground/80">Aplicaciones Epoxicas<br/>Garantizadas<br/>Lexfor S.A de C.V</span>
           </Link>
 
