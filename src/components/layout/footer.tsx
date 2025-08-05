@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -41,8 +42,13 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
+        <div className="border-t mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} LEXFOR S.A DE C.V. Todos los derechos reservados.</p>
+           <div className="flex items-center gap-4 mt-4 sm:mt-0">
+                <Link href="https://www.facebook.com/share/1B9V5FwnU3/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <Facebook className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                </Link>
+            </div>
         </div>
       </div>
     </footer>
