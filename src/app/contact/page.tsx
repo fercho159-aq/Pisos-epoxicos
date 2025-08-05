@@ -27,9 +27,9 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-xl font-bold">Oficina Corporativa</h3>
                   <p className="text-muted-foreground">
-                    Av. de las Granjas 35, <br/>
-                    Col. Jardín Azpeitia, Azcapotzalco, <br/>
-                    02530 Ciudad de México, CDMX
+                    Manzana 3, Segunda Sección, <br/>
+                    San Lorenzo Toxico, CP 50780, <br/>
+                    Ixtlahuaca, México.
                   </p>
                 </div>
               </div>
@@ -39,7 +39,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Teléfono</h3>
-                  <a href="tel:8007866427" className="text-muted-foreground hover:text-primary">800-STONHARD (786-6427)</a>
+                  <a href="tel:5530376006" className="text-muted-foreground hover:text-primary block">55 3037 6006</a>
+                  <a href="tel:7121119110" className="text-muted-foreground hover:text-primary block">712 111 9110</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -48,7 +49,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Email</h3>
-                  <a href="mailto:info.mexico@stonhard.com" className="text-muted-foreground hover:text-primary">info.mexico@stonhard.com</a>
+                  <a href="mailto:ventas@aeglexfor.com.mx" className="text-muted-foreground hover:text-primary">ventas@aeglexfor.com.mx</a>
                 </div>
               </div>
             </div>

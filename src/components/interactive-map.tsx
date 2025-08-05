@@ -4,9 +4,7 @@ import React from "react";
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 
 const locations = [
-  { lat: 19.4878, lng: -99.1837, name: "Oficina CDMX" }, // Azcapotzalco
-  { lat: 25.6866, lng: -100.3161, name: "Rep. Monterrey" },
-  { lat: 20.6597, lng: -103.3496, name: "Rep. Guadalajara" },
+  { lat: 19.576856, lng: -99.761804, name: "Oficina Corporativa" }, 
 ];
 
 export function InteractiveMap() {
@@ -28,12 +26,12 @@ export function InteractiveMap() {
   return (
     <APIProvider apiKey={apiKey}>
       <Map
-        defaultCenter={{ lat: 19.4326, lng: -99.1332 }}
-        defaultZoom={5}
+        defaultCenter={locations[0]}
+        defaultZoom={15}
         mapId="stonhard-map"
         className="w-full h-full"
         gestureHandling={'greedy'}
-        disableDefaultUI={true}
+        disableDefaultUI={false}
       >
         {locations.map((loc) => (
           <Marker key={loc.name} position={loc} title={loc.name} />

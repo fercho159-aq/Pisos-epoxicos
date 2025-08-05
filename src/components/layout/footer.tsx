@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-import { Facebook, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {
@@ -10,13 +9,13 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2 mb-2">
-                <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={100} height={50} className="object-contain" />
+                <Image src="/images/logo.png" alt="LEXFOR Logo" width={100} height={50} className="object-contain" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
                 Proporcionando soluciones de pisos de alto rendimiento para los entornos más exigentes de México.
             </p>
           </div>
-          <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-8">
             <div>
               <h4 className="font-bold mb-4">Navegación</h4>
               <ul className="space-y-2 text-sm">
@@ -39,14 +38,6 @@ export function Footer() {
                 <li><Link href="/terms" className="text-muted-foreground hover:text-primary">Términos de Servicio</Link></li>
                 <li><Link href="/privacy" className="text-muted-foreground hover:text-primary">Política de Privacidad</Link></li>
               </ul>
-            </div>
-             <div>
-              <h4 className="font-bold mb-4">Síganos</h4>
-              <div className="flex gap-4">
-                  <Link href="#" aria-label="Facebook"><Facebook className="w-6 h-6 text-muted-foreground hover:text-primary"/></Link>
-                  <Link href="#" aria-label="LinkedIn"><Linkedin className="w-6 h-6 text-muted-foreground hover:text-primary"/></Link>
-                  <Link href="#" aria-label="Twitter"><Twitter className="w-6 h-6 text-muted-foreground hover:text-primary"/></Link>
-              </div>
             </div>
           </div>
         </div>
