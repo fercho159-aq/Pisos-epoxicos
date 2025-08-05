@@ -1,42 +1,20 @@
 "use client";
 
 import React from "react";
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
-
-const locations = [
-  { lat: 19.576856, lng: -99.761804, name: "Oficina Corporativa" }, 
-];
 
 export function InteractiveMap() {
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-
-  if (!apiKey) {
-    return (
-      <div className="w-full h-full bg-muted flex items-center justify-center text-center p-4">
-        <div>
-          <p className="font-semibold text-destructive">API Key de Google Maps no encontrada.</p>
-          <p className="text-sm text-muted-foreground">
-            Por favor, configure la variable de entorno NEXT_PUBLIC_GOOGLE_MAPS_API_KEY para mostrar el mapa.
-          </p>
-        </div>
-      </div>
-    );
-  }
+  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.3793498844813!2d-99.7643789255243!3d19.525542181745424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d26308077b1029%3A0x4a3fff6541f5344d!2sLEXFOR!5e0!3m2!1ses-419!2smx!4v1721344843916!5m2!1ses-419!2smx";
 
   return (
-    <APIProvider apiKey={apiKey}>
-      <Map
-        defaultCenter={locations[0]}
-        defaultZoom={15}
-        mapId="stonhard-map"
-        className="w-full h-full"
-        gestureHandling={'greedy'}
-        disableDefaultUI={false}
-      >
-        {locations.map((loc) => (
-          <Marker key={loc.name} position={loc} title={loc.name} />
-        ))}
-      </Map>
-    </APIProvider>
+    <iframe
+      src={embedUrl}
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen={true}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Ubicación de LEXFOR S.A DE C.V"
+    ></iframe>
   );
 }
