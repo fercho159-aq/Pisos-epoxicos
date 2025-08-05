@@ -135,7 +135,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/logo.png" alt="LEXFOR Logo" width={70} height={40} className="object-contain" />
+            <Image src="/images/logo.png" alt="LEXFOR Logo" width={100} height={50} className="object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -182,7 +182,7 @@ export function Header() {
                     <SheetTitle asChild>
                        <div className="flex justify-between items-center">
                         <Link href="/">
-                            <Image src="/images/logo.png" alt="LEXFOR Logo" width={120} height={32} className="object-contain" />
+                            <Image src="/images/logo.png" alt="LEXFOR Logo" width={140} height={40} className="object-contain" />
                         </Link>
                       </div>
                     </SheetTitle>
