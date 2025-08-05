@@ -106,8 +106,7 @@ export default function Home() {
           <CarouselContent className="h-full">
             {sliderItems.map((slide, index) => (
               <CarouselItem key={index} className="h-full">
-                <div className="relative h-full flex items-center justify-center text-center text-white">
-                  <div className="absolute inset-0 bg-black/50 z-10"></div>
+                <div className="relative h-full flex items-center justify-center text-center text-foreground">
                   <Image
                     src={slide.imageUrl}
                     alt={slide.title}
@@ -121,7 +120,7 @@ export default function Home() {
                     <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 animate-fade-in-down">
                       {slide.title}
                     </h1>
-                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-200 mb-8 animate-fade-in-up">
+                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 mb-8 animate-fade-in-up">
                       {slide.description}
                     </p>
                     <Link href={slide.buttonLink}>
@@ -134,8 +133,8 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30 text-white bg-white/20 hover:bg-white/40 border-none group-hover:opacity-100 opacity-0 transition-opacity" />
-          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30 text-white bg-white/20 hover:bg-white/40 border-none group-hover:opacity-100 opacity-0 transition-opacity" />
+          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30 text-white bg-black/20 hover:bg-black/40 border-none group-hover:opacity-100 opacity-0 transition-opacity" />
+          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30 text-white bg-black/20 hover:bg-black/40 border-none group-hover:opacity-100 opacity-0 transition-opacity" />
         </Carousel>
       </section>
 
