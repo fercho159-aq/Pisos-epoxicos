@@ -135,7 +135,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/logo.png" alt="LEXFOR Logo" width={130} height={60} className="object-contain" />
+            <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={150} height={70} className="object-contain" />
             <span className="font-bold text-xs uppercase hidden xl:block text-foreground/80">Aplicaciones Epoxicas<br/>Garantizadas<br/>Lexfor S.A de C.V</span>
           </Link>
 
@@ -183,7 +183,7 @@ export function Header() {
                     <SheetTitle asChild>
                        <div className="flex justify-between items-center">
                         <Link href="/">
-                            <Image src="/images/logo.png" alt="LEXFOR Logo" width={140} height={40} className="object-contain" />
+                            <Image src="/images/LOGO LEXFOR-SIN FONDO.png" alt="LEXFOR Logo" width={140} height={40} className="object-contain" />
                         </Link>
                       </div>
                     </SheetTitle>
