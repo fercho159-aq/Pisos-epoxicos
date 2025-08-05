@@ -205,6 +205,12 @@ const productCategories = [{
         hint: "commercial aluminum"
       },
       {
+        name: "Servicio de Piso Laminado",
+        description: "Instalación profesional de pisos laminados para un acabado moderno y duradero en espacios residenciales y comerciales.",
+        image: "/images/45. PISOS LAMINADOS/WhatsApp Image 2025-07-07 at 5.35.38 PM (4).jpeg",
+        hint: "laminate flooring"
+      },
+      {
         name: "Loseta",
         description: "Residencial, comercial e industrial.",
         image: "/images/43. LOSETAS/WhatsApp Image 2025-07-07 at 4.46.50 PM.jpeg",
