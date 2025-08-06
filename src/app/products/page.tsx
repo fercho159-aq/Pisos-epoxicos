@@ -39,19 +39,19 @@ const productCategories = [{
       {
         name: "Sistema Ucrete RG",
         description: "Diseñado para recubrir zoclos, trincheras, muretes de contención secundaria y bases de tanques. Resistencia química, al impacto y choques térmicos (-25°C a +130°C).",
-        image: "/images/6. SISTEMA UCRETE RG/WhatsApp Image 2025-06-27 at 5.59.57 PM.jpeg",
+        image: "/images/6. SISTEMA UCRETE RG/WhatsApp Image 2025-06-27 at 5.59.57 PM.jpg",
         hint: "industrial trench",
       },
       {
         name: "Sistema Ucrete UD 200",
         description: "Acabado antiderrapante con resistencia extrema a impactos, químicos y choques térmicos (-25°C a +130°C). Soporta derrames ocasionales hasta +150°C.",
-        image: "/images/7. SISTEMA UCRETE UD 200/WhatsApp Image 2025-06-27 at 5.59.58 PM.jpeg",
+        image: "/images/7. SISTEMA UCRETE UD 200/WhatsApp Image 2025-06-27 at 5.59.58 PM.jpg",
         hint: "heavy duty floor",
       },
       {
         name: "Sistema Ucrete DP",
         description: "Superficie antiderrapante de textura fina. Alta resistencia al impacto, agentes agresivos y choques térmicos (-40°C a +120°C). Fácil limpieza.",
-        image: "/images/8. SISTEMA UCRETE DP/WhatsApp Image 2025-06-27 at 5.59.58 PM (1).jpeg",
+        image: "/images/8. SISTEMA UCRETE DP/WhatsApp Image 2025-06-27 at 5.59.58 PM (1).jpg",
         hint: "textured industrial floor",
       },
     ],
@@ -75,7 +75,7 @@ const productCategories = [{
       {
         name: "Sistema Epóxico Antiderrapante",
         description: "Acabado antiderrapante para áreas con contacto constante con agua/líquidos. Reduce deslizamientos peatonales/mecánicos. Refuerzo contra ataques químicos.",
-        image: "/images/11. SISTEMA ANTIDERRAPANTE/WhatsApp Image 2025-06-27 at 5.59.58 PM.jpeg",
+        image: "/images/11. SISTEMA ANTIDERRAPANTE/WhatsApp Image 2025-06-27 at 5.59.58 PM.jpg",
         hint: "non-slip floor",
       },
       {
