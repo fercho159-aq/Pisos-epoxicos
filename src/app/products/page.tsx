@@ -74,7 +74,7 @@ const productCategories = [{
       },
       {
         name: "Sistema Epóxico Antiderrapante",
-        description: "Acabado antiderrapante para áreas con contacto constante con agua/líquidos. Reduce deslizamientos peatonales/mecánicos. Refuerzo contra ataques químicos.",
+        description: "Acabado antiderrapante para áreas de contacto constante con agua/líquidos. Reduce deslizamientos peatonales/mecánicos. Refuerzo contra ataques químicos.",
         image: "/images/11. SISTEMA ANTIDERRAPANTE/WhatsApp Image 2025-06-27 at 5.59.58 PM.jpg",
         hint: "non-slip floor",
       },
