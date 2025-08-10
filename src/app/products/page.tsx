@@ -67,7 +67,7 @@ const productCategories = [{
         hint: "clean room floor",
       },
       {
-        name: "Sistema Epóxico Cascara de Naranja",
+        name: "Sistema Epóxico Cáscara de Naranja",
         description: "Acabado semiderrapante con textura tipo cáscara de naranja. Ideal para almacenes, talleres y pasillos. Opciones con/sin agregados para tránsito pesado/ligero.",
         image: "/images/10. SISTEMA CASCARA DE NARANJA/WhatsApp Image 2025-07-07 at 6.14.57 PM.jpeg",
         hint: "textured epoxy",
