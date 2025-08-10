@@ -122,7 +122,7 @@ const productCategories = [{
       },
       {
         name: "Curva Sanitaria",
-        description: "Recubrimiento en uniones muro-muro/muro-platón (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad.",
+        description: "Recubrimiento en uniones muro-muro/muro-plafón (radio mínimo 5cm). Elimina esquinas para evitar acumulación de suciedad.",
         image: "/images/18. CURVA SANITARIA/WhatsApp Image 2025-07-01 at 5.08.51 PM.jpeg",
         hint: "sanitary cove"
       },
