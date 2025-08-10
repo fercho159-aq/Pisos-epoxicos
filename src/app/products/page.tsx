@@ -158,7 +158,7 @@ const productCategories = [{
       },
       {
         name: "Liso Sanitario con Pintura Antibacterial",
-        description: "Inhibe bacterias, hongos y virus. Ideal farmacéutica, quirófanos, laboratorios.",
+        description: "Inhibe bacterias, hongos y virus. Ideal para farmacéutica, quirófanos, laboratorios.",
         image: "/images/29. LISO SANITARIO ANTIBACTERIAL/WhatsApp Image 2025-07-03 at 9.54.34 AM.jpeg",
         hint: "antibacterial paint"
       },
