@@ -219,7 +219,7 @@ const productCategories = [{
       {
         name: "Pintura",
         description: "Vinílica, esmaltes, poliuretano.",
-        image: "/images/44. PINTURA/WhatsApp Image 2025-07-07 at 5.28.16 PM.jpeg",
+        image: "/images/44. PINTURA/WhatsApp Image 2025-08-18 at 7.28.43 AM.jpeg",
         hint: "paint cans"
       },
     ]
